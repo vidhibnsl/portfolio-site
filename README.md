@@ -388,3 +388,4 @@ Pass a partial `config` prop to override any default:
 - `prefers-reduced-motion`: disables per-frame deformation entirely; terrain shows static peaks.
 - Geometry is created once (`useMemo`). Only `position.array` Y values are updated each frame.
 - No normals recomputation needed (wireframe `MeshBasicMaterial` doesn't use normals).
+# portfolio-site
