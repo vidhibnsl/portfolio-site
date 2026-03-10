@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'Wavehaus';
+  src: url('https://db.onlinewebfonts.com/t/9efc4acc01284ee3654ef9bfd7253d43.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/9efc4acc01284ee3654ef9bfd7253d43.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wavehaus';
+  src: url('https://db.onlinewebfonts.com/t/cd2de7a34e0fbb4bf2772558e3efa576.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/cd2de7a34e0fbb4bf2772558e3efa576.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --fg-dim: rgba(255, 255, 255, 0.55);
+  --font: "Wavehaus", "Sohne", "Söhne", "Soehne", "Neue Montreal", "NeueMontreal", sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, th {
+  font-weight: 600;
+}
+
+a { color: var(--fg); text-decoration: none; }
+
+.back-link {
+  position: fixed;
+  top: 1.2rem;
+  left: 2.5rem;
+  z-index: 10;
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--fg-dim);
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--fg); }
+
+/* ---- Layout ---- */
+.about {
+  display: flex;
+  min-height: 100vh;
+  padding: 4rem 3rem 3rem;
+  gap: 4rem;
+}
+
+.about-left {
+  flex: 0 0 42%;
+  max-width: 42%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-right {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+/* ---- Photo ---- */
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 360px;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.15);
+}
+
+/* ---- Bio ---- */
+.about-bio h1 {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 500;
+  margin: 0 0 0.4rem;
+}
+
+.about-subtitle {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin: 0 0 1.2rem;
+}
+
+.about-bio p:last-child {
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--fg-dim);
+  margin: 0;
+}
+
+/* ---- Project list ---- */
+.about-right h2 {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin: 0 0 1.5rem;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s;
+}
+
+.project-list li:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.project-year {
+  flex: 0 0 3.5rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--fg-dim);
+  letter-spacing: 0.04em;
+}
+
+.project-name {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--fg);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 3rem 2rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .about-left {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .about-photo {
+    max-height: 280px;
+  }
+}

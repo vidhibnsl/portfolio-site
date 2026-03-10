@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Bull Jukebox — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-meta {
+      margin: 0.45rem 0 0;
+      font-size: 0.64rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.58);
+    }
+    .gallery-subheading {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 2rem 0 1rem;
+      padding: 0 2.5rem;
+    }
+    .gallery-subheading:first-of-type {
+      margin-top: 1.5rem;
+    }
+    .rb-gallery {
+      max-width: 1320px;
+      margin: 0 auto 1rem;
+      padding: 0 2.5rem 0.5rem;
+    }
+    .rb-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+      max-width: 82vw;
+      margin: 0 auto;
+    }
+    .rb-grid-five .gallery-item:last-child {
+      grid-column: 1 / -1;
+      max-width: calc((100% - 6px) / 2);
+      justify-self: center;
+    }
+    .rb-gallery .gallery-item {
+      background: transparent;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+    }
+    .rb-gallery .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transform: scale(1.08);
+    }
+    @media (max-width: 700px) {
+      .gallery-subheading {
+        padding: 0 1.5rem;
+      }
+      .rb-gallery {
+        padding: 0 1.5rem 0.5rem;
+      }
+      .rb-grid {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Red Bull</h1>
+      <p class="project-subtitle">Experience · Stage Design</p>
+      <p class="project-meta">Agency: PHNTM and No Hot Ashes</p>
+    </div>
+    <div class="project-header-right">
+      <p>Interactive stage and visual design for Red Bull's live music activation. Built real-time visual systems that responded to music and performer movement, creating an immersive audiovisual environment.</p>
+    </div>
+  </header>
+
+  <h2 class="gallery-subheading">Red Monday- Red Venice</h2>
+  <section class="project-gallery rb-gallery">
+    <div class="rb-grid rb-grid-five">
+      <div class="gallery-item"><img src="../assets/Red Bull projects/RDBL_RMVE_StageView02_edited.avif" alt="Red Bull render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Red Bull projects/RDBL_RMVE_Entrance_night_People_edited_j.avif" alt="Red Bull render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Red Bull projects/RDBL_RMVE_infinitymirror.avif" alt="Red Bull render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Red Bull projects/RDBL_RMVE_overallmaze_05.avif" alt="Red Bull render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Red Bull projects/RDBL_RMVE_panelview_03.avif" alt="Red Bull render" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <h2 class="gallery-subheading">Jukebox</h2>
+  <section class="project-gallery rb-gallery">
+    <div class="rb-grid">
+      <div class="gallery-item"><img src="../assets/Red Bull projects/cd3fb157-6b68-40e1-91a7-5ab600ff42df.png" alt="Red Bull Jukebox render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Red Bull projects/da86ae79-fb6a-4085-8b0a-f64172c584ae.png" alt="Red Bull Jukebox render" loading="lazy" /></div>
+    </div>
+  </section>
+</body>
+</html>

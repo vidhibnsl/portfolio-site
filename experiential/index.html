@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidhi Bansal — Experiential Projects</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <style>
+    .projects {
+      padding-top: 6.2rem;
+    }
+    .projects-grid {
+      row-gap: 14.4px;
+      column-gap: 14.4px;
+    }
+    .project-media {
+      height: 277px;
+    }
+    .exp-gallery {
+      padding: 2.5rem 0 1rem;
+    }
+    .exp-gallery-heading {
+      font-family: var(--font-bold);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin: 0 0 1.2rem;
+      text-align: center;
+    }
+    .exp-gallery-grid {
+      display: block;
+      padding: 0 12px;
+      overflow: hidden;
+    }
+    .exp-gallery-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 6px;
+      width: 100%;
+      margin-left: 0;
+      align-items: stretch;
+    }
+    .exp-gallery-row:last-child {
+      margin-bottom: 0;
+    }
+    .exp-gallery-item {
+      flex: 0 0 var(--w);
+      max-width: var(--w);
+      border-radius: 0;
+      overflow: visible;
+      background: transparent;
+    }
+    .exp-gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      aspect-ratio: auto;
+      border-radius: 0;
+    }
+    @media (max-width: 1024px) {
+      .exp-gallery-row {
+        width: 100%;
+        margin-left: 0;
+        flex-wrap: wrap;
+      }
+      .exp-gallery-item {
+        --w: calc(33.333% - 3px);
+      }
+    }
+    @media (max-width: 768px) {
+      .exp-gallery-item {
+        --w: calc(50% - 2px);
+      }
+    }
+    @media (max-width: 560px) {
+      .exp-gallery-item {
+        --w: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="header">
+    <a href="../index.html" class="logo">Vidhi Bansal</a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="../about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">
+      <span class="menu-btn-line"></span>
+      <span class="menu-btn-line"></span>
+    </button>
+  </header>
+
+  <main class="main">
+    <section id="projects" class="projects">
+      <div class="projects-inner">
+        <div class="projects-grid">
+          <article id="proj-cisco" class="project-block" data-project data-href="../projects/cisco-partner-summit.html">
+            <div class="project-media">
+              <img src="../assets/partner summit/site photos /IMG_3530.jpeg" alt="Cisco Partner Summit" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Cisco Partner Summit</h3>
+            </div>
+          </article>
+
+          <article id="proj-bumble" class="project-block" data-project data-href="../projects/bumble-holiday-stunt.html">
+            <div class="project-media">
+              <img src="../assets/bumble holiday stunt /LA Site/Select 4.jpg" alt="Bumble Holiday Stunt" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Bumble Holiday Stunt</h3>
+            </div>
+          </article>
+
+          <article id="proj-mubadala" class="project-block" data-project data-href="../projects/mubadala-sail-grand-prix.html">
+            <div class="project-media">
+              <img src="../assets/mubadala dc citi open /site/DC Carousel 1.png" alt="Mubadala Sail GP &amp; DC Citi Open" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Mubadala Sail GP &amp; DC Citi Open</h3>
+            </div>
+          </article>
+
+          <article id="proj-disney" class="project-block" data-project data-href="../projects/walt-disney-cruise-line.html">
+            <div class="project-media">
+              <img src="../assets/wdi-cruise-thumb.png" alt="Walt Disney Cruise Line" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Walt Disney Cruise Line</h3>
+            </div>
+          </article>
+
+          <article id="proj-rocket-cavs" class="project-block" data-project data-href="../projects/rocket-cavs.html">
+            <div class="project-media">
+              <img src="../assets/Rocket Superbowl/rocket01.jpeg" alt="Rocket Companies- SuperBowl, CAVS" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Rocket- SuperBowl Experience</h3>
+            </div>
+          </article>
+
+          <article id="proj-chase-lounge" class="project-block" data-project data-href="../projects/chase-sapphire-lounge.html">
+            <div class="project-media">
+              <img src="../assets/chase-sapphire-lounge-thumb.png" alt="Chase Sapphire Lounge" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Chase Sapphire Lounge</h3>
+            </div>
+          </article>
+
+          <article id="proj-tommy-exp" class="project-block" data-project data-href="../projects/tommy-hilfiger.html">
+            <div class="project-media">
+              <img src="../assets/tommy-hilfiger-thumb.png" alt="Tommy Hilfiger" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Tommy Hilfiger</h3>
+            </div>
+          </article>
+
+          <article id="proj-fifa-exp" class="project-block" data-project data-href="../projects/fifa.html">
+            <div class="project-media">
+              <img src="../assets/fifa-thumb.png" alt="FIFA" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>FIFA</h3>
+            </div>
+          </article>
+
+          <article id="proj-al-marmoom" class="project-block" data-project data-href="../projects/al-marmoom.html">
+            <div class="project-media">
+              <img src="../assets/al-marmoom-thumb.png" alt="Al Marmoom" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Al Marmoom</h3>
+            </div>
+          </article>
+
+          <article id="proj-holo-box" class="project-block" data-project data-href="../projects/holo-box.html">
+            <div class="project-media">
+              <img src="../assets/holo-box-thumb.png" alt="Holo Box" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Holo Box</h3>
+            </div>
+          </article>
+
+          <article id="proj-redbull" class="project-block" data-project data-href="../projects/red-bull-jukebox.html">
+            <div class="project-media">
+              <img src="../assets/Red Bull projects/cd3fb157-6b68-40e1-91a7-5ab600ff42df.png" alt="Red Bull Jukebox" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>RedBull Pitches</h3>
+            </div>
+          </article>
+
+          <article id="proj-overly-animated" class="project-block" data-project data-href="../projects/overly-animated.html">
+            <div class="project-media">
+              <img src="../assets/overly-animated-thumb.png" alt="Overly Animated" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Overly Animated</h3>
+            </div>
+          </article>
+
+          <article id="proj-rocket-tigers-entrance" class="project-block" data-project data-href="../projects/rocket-tigers-entrance.html">
+            <div class="project-media">
+              <img src="../assets/Rocket Tigers Entrance/siteimage04.jpg" alt="Rocket Tigers Entrance" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Rocket Tigers Entrance</h3>
+            </div>
+          </article>
+
+          <article id="proj-docusign-momentum" class="project-block" data-project data-href="../projects/docusign-momentum.html">
+            <div class="project-media">
+              <img src="../assets/Docusign MOmentum/DSC07746.jpg" alt="DocuSign Momentum" loading="lazy" style="object-fit: cover;" />
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>DocuSign Momentum</h3>
+            </div>
+          </article>
+
+          <article id="proj-experiential-motion-graphics" class="project-block" data-project data-href="../projects/experiential-motion-graphics.html">
+            <div class="project-media">
+              <video autoplay loop muted playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+                <source src="../assets/experiential motion graphics/AWS Storefront - Pitch/AWS_NRF_GenAIAScreens.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="project-info">
+              <span class="project-cat">Experience</span>
+              <h3>Experiential Motion Graphics</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="exp-gallery">
+      <div class="projects-inner">
+        <h2 class="exp-gallery-heading">Gallery</h2>
+        <div class="exp-gallery-grid">
+          <div class="exp-gallery-row">
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/image.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/image02.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/a30482ee-7465-48f5-b2ef-5851a3100cd5.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/04.png" alt="Gallery image" loading="lazy" /></div>
+          </div>
+          <div class="exp-gallery-row">
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/05.jpg" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/06.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/07.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/08.png" alt="Gallery image" loading="lazy" /></div>
+          </div>
+          <div class="exp-gallery-row">
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/09.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/10.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/11.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/12.png" alt="Gallery image" loading="lazy" /></div>
+          </div>
+          <div class="exp-gallery-row">
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/13.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/14.jpg" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/15.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/16.png" alt="Gallery image" loading="lazy" /></div>
+          </div>
+          <div class="exp-gallery-row">
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/17.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/18.jpg" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/19.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/20.png" alt="Gallery image" loading="lazy" /></div>
+          </div>
+          <div class="exp-gallery-row">
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/21.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/22.png" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/23.jpeg" alt="Gallery image" loading="lazy" /></div>
+            <div class="exp-gallery-item" style="--w:24%"><img src="../assets/GalleryImages/24.jpeg" alt="Gallery image" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <h2 class="contact-heading">Contact</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" name="firstName" placeholder="First Name" required />
+            <input type="text" name="lastName" placeholder="Last Name" required />
+          </div>
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message..." rows="4"></textarea>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <p class="form-success" id="formSuccess" hidden>Thanks for submitting.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Vidhi Bansal</span>
+    <a href="#intro">Top</a>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      function applyJustifiedRows() {
+        var rows = document.querySelectorAll('.exp-gallery-row');
+        rows.forEach(function (row) {
+          var items = Array.from(row.querySelectorAll('.exp-gallery-item'));
+          if (!items.length) return;
+
+          if (window.innerWidth <= 900) {
+            items.forEach(function (item) {
+              item.style.flex = '';
+              item.style.width = '';
+              item.style.maxWidth = '';
+              item.style.height = '';
+            });
+            return;
+          }
+
+          var rowWidth = row.clientWidth;
+          var rowGap = 6;
+          var totalGap = rowGap * (items.length - 1);
+          var aspectSum = 0;
+
+          items.forEach(function (item) {
+            var img = item.querySelector('img');
+            if (!img) return;
+            var ar = 1;
+            if (img.naturalWidth && img.naturalHeight) {
+              ar = img.naturalWidth / img.naturalHeight;
+            }
+            aspectSum += ar;
+            item.dataset.ar = String(ar);
+          });
+
+          if (!aspectSum) return;
+          var rowHeight = Math.max(80, (rowWidth - totalGap) / aspectSum);
+
+          items.forEach(function (item) {
+            var ar = Number(item.dataset.ar || 1);
+            var itemWidth = rowHeight * ar;
+            item.style.flex = '0 0 ' + itemWidth + 'px';
+            item.style.width = itemWidth + 'px';
+            item.style.maxWidth = itemWidth + 'px';
+            item.style.height = rowHeight + 'px';
+          });
+        });
+      }
+
+      function bindImages() {
+        document.querySelectorAll('.exp-gallery-row img').forEach(function (img) {
+          img.addEventListener('load', applyJustifiedRows);
+        });
+      }
+
+      window.addEventListener('load', function () {
+        bindImages();
+        applyJustifiedRows();
+      });
+      window.addEventListener('resize', applyJustifiedRows);
+    })();
+  </script>
+</body>
+</html>

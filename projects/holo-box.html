@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holo Box — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 0.5rem;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .gallery-item,
+    .gallery-item.wide {
+      flex: 0 1 calc(33.333% - 7px);
+      max-width: calc(33.333% - 7px);
+      background: transparent;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 12px;
+    }
+    .gallery-subheading {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 1.5rem 0 1rem;
+      padding: 0 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+      }
+    }
+    @media (max-width: 600px) {
+      .project-gallery { padding: 0 1.5rem 0.5rem; }
+      .gallery-subheading { padding: 0 1.5rem; }
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../experiential/index.html" class="back-link">← Back</a>
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>HOLO Merch</h1>
+      <p class="project-subtitle">Experience</p>
+    </div>
+    <div class="project-header-right">
+      <p>Renders for the pitch - HOLO Merch. Responsible for setting up file, modeling edits, character animations and rigging for the videos, lighting and rendering alongside the cinematics team at PHNTM.</p>
+      <p>Pitched for brands - NBA, Lakers, Skrillex, BlackPink, Flyers.</p>
+    </div>
+  </header>
+  <h2 class="gallery-subheading">Renders</h2>
+  <section class="project-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="../assets/Holo Merch/holo-merch-01.jpeg" alt="HOLO Merch render 1" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Holo Merch/holo-merch-02.jpeg" alt="HOLO Merch render 2" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Holo Merch/holo-merch-03.jpeg" alt="HOLO Merch render 3" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Holo Merch/holo-merch-04.jpg" alt="HOLO Merch render 4" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Holo Merch/holo-merch-05.jpg" alt="HOLO Merch render 5" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Holo Merch/holo-merch-06.jpg" alt="HOLO Merch render 6" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Holo Merch/holo-merch-07.jpeg" alt="HOLO Merch render 7" loading="lazy" /></div>
+    </div>
+  </section>
+</body>
+</html>

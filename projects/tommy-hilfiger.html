@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tommy Hilfiger — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    :root {
+      --tommy-scale: 70%;
+      --tommy-gap: 6px;
+    }
+    .tommy-gallery {
+      display: grid;
+      gap: var(--tommy-gap);
+      width: var(--tommy-scale);
+      margin: 0 auto 1.5rem;
+      padding: 1.2rem 0;
+    }
+    .tommy-row-wide {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .tommy-row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--tommy-gap);
+    }
+    .tommy-row-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--tommy-gap);
+      max-width: 100%;
+      margin: 0;
+    }
+    .tommy-gallery .gallery-item {
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .tommy-gallery .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .tommy-gallery .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+    .tommy-row-wide .gallery-item {
+      aspect-ratio: 1900 / 996;
+    }
+    .tommy-row-3 .gallery-item {
+      aspect-ratio: 964 / 1452;
+    }
+    .tommy-row-2 .gallery-item {
+      aspect-ratio: 864 / 1080;
+    }
+    @media (max-width: 700px) {
+      :root { --tommy-scale: 100%; }
+      .tommy-row-3 { grid-template-columns: 1fr 1fr; }
+      .tommy-row-2 { max-width: 100%; }
+      .tommy-gallery { padding: 1rem 1.5rem; }
+      .video-section { padding: 0 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .tommy-row-3 { grid-template-columns: 1fr; }
+      .tommy-row-2 { grid-template-columns: 1fr; }
+    }
+    .video-section {
+      padding: 0;
+      width: var(--tommy-scale);
+      margin: 0 auto 2rem;
+      margin-bottom: 2rem;
+    }
+    .video-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--tommy-gap);
+      margin-bottom: var(--tommy-gap);
+    }
+    .video-row.two-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .project-video {
+      width: 100%;
+      display: block;
+      background: #000;
+      margin-bottom: 0;
+    }
+    .video-row:last-child {
+      margin-bottom: 0;
+    }
+    @media (max-width: 700px) {
+      .video-row.two-up {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Tommy Hilfiger</h1>
+      <p class="project-subtitle">Cinematic · Fashion</p>
+    </div>
+    <div class="project-header-right">
+      <p>Two design pitches for Tommy Hilfiger's fashion experience being held in fall and summer — renders created alongside the cinematics team at PHNTM.</p>
+      <p style="margin-top:0.5rem;font-size:0.85rem;color:rgba(255,255,255,0.45);">Tools — Maya, Rhino, Unreal Engine, After Effects, Marvelous Designer</p>
+    </div>
+  </header>
+
+  <div class="video-section">
+    <div class="video-row">
+      <video class="project-video" autoplay loop muted playsinline preload="auto">
+        <source src="https://video.wixstatic.com/video/6ee3b8_8c6a3b1fbbee49308b549ea55166b64e/720p/mp4/file.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="video-row">
+      <video class="project-video" autoplay loop muted playsinline preload="auto">
+        <source src="https://video.wixstatic.com/video/6ee3b8_3b3f26e274364c979624929b5a1bd909/720p/mp4/file.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="video-row two-up">
+      <video class="project-video" autoplay loop muted playsinline preload="auto">
+        <source src="https://video.wixstatic.com/video/6ee3b8_e05a6472d9c44ea89073873d4f8ef85d/720p/mp4/file.mp4" type="video/mp4" />
+      </video>
+      <video class="project-video" autoplay loop muted playsinline preload="auto">
+        <source src="https://video.wixstatic.com/video/6ee3b8_b1b7f9e4eb4a4ee6be8b93055d30fe6c/720p/mp4/file.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="video-row">
+      <video class="project-video" autoplay loop muted playsinline preload="auto">
+        <source src="https://video.wixstatic.com/video/6ee3b8_b9d8e4773ec24d6694669e6c56e4895f/720p/mp4/file.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <div class="tommy-gallery">
+    <div class="tommy-row-wide">
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_051c3f696d4c4df39b58025c5a8d370a~mv2.jpeg/v1/fill/w_1900,h_996,al_c,q_90,enc_auto/TOMH_R1_Establishing_Audience_Wide_1_v01.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+    </div>
+
+    <div class="tommy-row-2">
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_c946d8fee2144c3abde8af069b86a1b4~mv2.jpeg/v1/fill/w_964,h_1452,al_c,q_90,enc_auto/TOMH_R1_HeroShot1_Still_v01_v01.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_8c9f7941aa624b9cb96a7d82af695d57~mv2.jpeg/v1/fill/w_964,h_1452,al_c,q_90,enc_auto/TOMH_R1_HeroShot2_Still3_v01.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+    </div>
+
+    <div class="tommy-row-2">
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_2b3c0f8b478c44f8b4d2aa139309b879~mv2.jpeg/v1/fill/w_968,h_1452,al_c,q_90,enc_auto/TOMH_R1_HeroStill1_Comp4_v01.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_e6cfd562d2b14d52b41666d926583c01~mv2.jpeg/v1/fill/w_966,h_1452,al_c,q_90,enc_auto/TOMH_R1_HeroStill2_Comp4_v01.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+    </div>
+
+    <div class="tommy-row-2">
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_647e827c751a4e86838b13db4f2a5d34~mv2.jpeg/v1/fill/w_966,h_1452,al_c,q_90,enc_auto/TOMH_R1_HeroStill4_Comp4_v01.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_20c1f3261b1a4d2d9ba66dd30e5d75f3~mv2.jpeg/v1/fill/w_968,h_1452,al_c,q_90,enc_auto/TOMH_R1_HeroShot3_Still2_v01.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+    </div>
+
+    <div class="tommy-row-wide">
+      <div class="gallery-item" style="aspect-ratio: 1896 / 1080;"><img src="https://static.wixstatic.com/media/6ee3b8_0d9083697bdb43ffbd7e1889e8dc40ee~mv2.jpeg/v1/crop/x_12,y_0,w_1896,h_1080/fill/w_1896,h_1080,al_c,q_90,enc_auto/TOMH_Concept1_Axo_0002.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+    </div>
+
+    <div class="tommy-row-2">
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_5b5329a964f84ae6aaabddc3b1a91d33~mv2.jpeg/v1/fill/w_864,h_1080,al_c,q_90,enc_auto/TOMH_Concept1_View5_0002.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_9d235939556b47c7806fd5e0eb9b6c27~mv2.jpeg/v1/fill/w_864,h_1080,al_c,q_90,enc_auto/TOMH_Concept1_View4_0002.jpeg" alt="Tommy Hilfiger" loading="lazy" /></div>
+    </div>
+  </div>
+</body>
+</html>

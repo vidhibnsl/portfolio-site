@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cisco Partner Summit — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 0.5rem;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .gallery-item,
+    .gallery-item.wide {
+      flex: 0 1 calc(33.333% - 7px);
+      max-width: calc(33.333% - 7px);
+      background: transparent;
+      overflow: hidden;
+      border-radius: 0;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 0;
+      transition: none !important;
+      transform: none !important;
+    }
+    .gallery-item:hover img {
+      transform: none !important;
+    }
+    .project-meta {
+      margin: 0.45rem 0 0;
+      font-size: 0.64rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.58);
+    }
+    .first-row {
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+    .first-row .gallery-item,
+    .first-row .gallery-item.wide {
+      flex: 0 1 calc(42% - 8px);
+      max-width: calc(42% - 8px);
+    }
+    .aligned-row {
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .aligned-row .gallery-item {
+      flex: 0 0 calc((100% - 20px) / 3);
+      max-width: calc((100% - 20px) / 3);
+      height: 332px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .aligned-row .gallery-item img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+    .renders-grid .gallery-item:nth-child(-n + 3),
+    .renders-grid .gallery-item.wide:nth-child(-n + 3) {
+      height: 320px;
+    }
+    .renders-grid {
+      column-gap: 10px;
+      row-gap: 1px;
+    }
+    .renders-grid .gallery-item:nth-child(-n + 3) img,
+    .renders-grid .gallery-item.wide:nth-child(-n + 3) img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .renders-grid .gallery-item:nth-child(n + 4):nth-child(-n + 6) {
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .renders-grid .gallery-item:nth-child(n + 4):nth-child(-n + 6) img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .renders-grid .gallery-item:nth-child(5) img {
+      object-fit: cover;
+    }
+    .renders-grid .gallery-item:nth-last-child(-n + 3) {
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .renders-grid .gallery-item:nth-last-child(-n + 3) img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-subheading {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 2.5rem 0 1rem;
+      padding: 0 2.5rem;
+    }
+    .gallery-subheading:first-of-type {
+      margin-top: 1.5rem;
+    }
+    .site-photos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .site-photos-grid .gallery-item {
+      aspect-ratio: 4 / 3;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      overflow: hidden;
+    }
+    .site-photos-grid .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+      }
+      .site-photos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .aligned-row .gallery-item {
+        flex-basis: auto;
+        max-width: none;
+        height: 270px;
+      }
+    }
+    @media (max-width: 600px) {
+      .project-gallery { padding: 0 1.5rem 0.5rem; }
+      .gallery-subheading { padding: 0 1.5rem; }
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      .site-photos-grid {
+        grid-template-columns: 1fr;
+      }
+      .aligned-row {
+        width: 100%;
+      }
+      .aligned-row .gallery-item {
+        flex-basis: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+      .aligned-row .gallery-item img {
+        width: 100%;
+        height: auto;
+      }
+      .renders-grid .gallery-item:nth-child(-n + 3),
+      .renders-grid .gallery-item.wide:nth-child(-n + 3) {
+        height: auto;
+      }
+      .renders-grid .gallery-item:nth-child(-n + 3) img,
+      .renders-grid .gallery-item.wide:nth-child(-n + 3) img {
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Cisco Partner Summit</h1>
+      <p class="project-subtitle">Experience · Event Design</p>
+      <p class="project-meta">Creative Agency: No Hot Ashes<br />Attendees: 4,000<br />Venue: San Diego Convention Center</p>
+    </div>
+    <div class="project-header-right">
+      <p>3D visualization and experience design for Cisco's annual partner summit. Led the environment design and live visual direction, creating dynamic stage backdrops and interactive displays using 3DS Max and Comfy UI enhancements.</p>
+    </div>
+  </header>
+
+  <h2 class="gallery-subheading">Renders</h2>
+  <section class="project-gallery">
+    <div class="gallery-grid renders-grid">
+      <div class="gallery-item wide"><img src="../assets/partner summit/render-first-image.png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/render-third-image.png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item wide"><img src="../assets/partner summit/render-sixth-image.png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/image02.png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/image04.png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/image05.png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/image (71).png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/image (72).png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/render-last-image.png" alt="Cisco Partner Summit Render" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <h2 class="gallery-subheading">Site Photos</h2>
+  <section class="project-gallery">
+    <div class="site-photos-grid">
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3529.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3534.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3536.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3538.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3540.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3545.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3551.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /IMG_3570.jpeg" alt="Cisco Partner Summit" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /cisco-site-new-02.png" alt="Cisco Partner Summit site photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /cisco-site-new-03.png" alt="Cisco Partner Summit site photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /cisco-site-new-04.png" alt="Cisco Partner Summit site photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/partner summit/site photos /cisco-site-new-01.png" alt="Cisco Partner Summit site photo" loading="lazy" /></div>
+    </div>
+  </section>
+</body>
+</html>

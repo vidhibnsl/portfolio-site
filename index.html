@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidhi Bansal — Real Time 3D Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="header">
+    <a href="#" class="logo">Vidhi Bansal</a>
+    <nav class="nav">
+      <a href="#intro">Home</a>
+      <a href="#story">Story</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">
+      <span class="menu-btn-line"></span>
+      <span class="menu-btn-line"></span>
+    </button>
+  </header>
+
+  <main class="main">
+    <section id="intro" class="hero" data-hero-3d>
+      <div class="hero-fog" aria-hidden="true">
+        <div class="hero-fog-layer"></div>
+        <div class="hero-fog-layer"></div>
+        <div class="hero-fog-layer"></div>
+        <div class="hero-fog-layer"></div>
+        <div class="hero-fog-layer"></div>
+        <div class="hero-fog-layer"></div>
+      </div>
+      <div class="hero-headline" data-hero-content>
+        <p class="hero-label">Real Time 3D Visualizer | Worldbuilder</p>
+        <div class="hero-capabilities" data-capabilities>
+          <a href="experiential/index.html" class="capability" data-capability>experiential</a>
+          <a href="aicinematics/index.html" class="capability" data-capability>cinematic</a>
+        </div>
+      </div>
+
+      <div class="hero-terrain" id="heroVisual" aria-hidden="true">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+      <div class="terrain-cursor-cta" id="terrainCursorCta">
+        <div class="ripple-ring"></div>
+        <div class="ripple-ring"></div>
+        <div class="ripple-ring"></div>
+      </div>
+      <a href="#story" class="hero-scroll-cta" data-scroll aria-label="Scroll down">
+        <svg class="mouse-icon" width="14" height="22" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="18" height="30" rx="9" stroke="currentColor" stroke-width="1"/>
+          <circle class="mouse-wheel" cx="10" cy="10" r="1.5" fill="currentColor"/>
+        </svg>
+      </a>
+    </section>
+
+    <section class="clients-bar">
+      <div class="clients-track">
+        <img src="assets/LOGOS/chase-icon.svg" alt="Chase" />
+        <span class="client-docusign" aria-label="DocuSign">
+          <img src="assets/LOGOS/docusign-mark.png" alt="DocuSign icon" />
+          <span>DocuSign</span>
+        </span>
+        <img src="assets/LOGOS/RedBull_Logo.png" alt="Red Bull" />
+        <img src="assets/LOGOS/mubadala logo .png" alt="Mubadala" />
+        <img src="assets/LOGOS/bumble_logo.png" alt="Bumble" />
+        <img src="assets/LOGOS/WDI_Logo.png" alt="Walt Disney Immersive" />
+        <img src="assets/LOGOS/dish_logo.png" alt="Dish" />
+        <img src="assets/LOGOS/rocketcompanies.png" alt="Rocket Companies" />
+        <img src="assets/LOGOS/Decagon_logo.png" alt="Decagon" />
+        <img src="assets/LOGOS/TommyHilfiger_Logo.png" alt="Tommy Hilfiger" />
+        <img src="assets/LOGOS/superbowllogo.png" alt="Super Bowl" />
+        <img src="https://cdn.simpleicons.org/fifa/ffffff" alt="FIFA" />
+        <img src="https://cdn.simpleicons.org/f1/ffffff" alt="F1" />
+        <img src="assets/LOGOS/chase-icon.svg" alt="Chase" />
+        <span class="client-docusign" aria-label="DocuSign">
+          <img src="assets/LOGOS/docusign-mark.png" alt="DocuSign icon" />
+          <span>DocuSign</span>
+        </span>
+        <img src="assets/LOGOS/RedBull_Logo.png" alt="Red Bull" />
+        <img src="assets/LOGOS/mubadala logo .png" alt="Mubadala" />
+        <img src="assets/LOGOS/bumble_logo.png" alt="Bumble" />
+        <img src="assets/LOGOS/WDI_Logo.png" alt="Walt Disney Immersive" />
+        <img src="assets/LOGOS/dish_logo.png" alt="Dish" />
+        <img src="assets/LOGOS/rocketcompanies.png" alt="Rocket Companies" />
+        <img src="assets/LOGOS/Decagon_logo.png" alt="Decagon" />
+        <img src="assets/LOGOS/TommyHilfiger_Logo.png" alt="Tommy Hilfiger" />
+        <img src="assets/LOGOS/superbowllogo.png" alt="Super Bowl" />
+        <img src="https://cdn.simpleicons.org/fifa/ffffff" alt="FIFA" />
+        <img src="https://cdn.simpleicons.org/f1/ffffff" alt="F1" />
+      </div>
+    </section>
+
+    <section id="story" class="story-parallax" data-story-parallax>
+      <div class="story-sticky">
+        <video id="storyVideo" class="story-video" muted playsinline preload="auto">
+          <source src="assets/TellHimILeft/sketchtofinal.mp4?v=20260306-1747" type="video/mp4" />
+        </video>
+        <div id="storyOverlay" class="story-overlay" aria-hidden="true">
+          <div class="story-content">
+            <p class="story-line">Space design meets cinematic storytelling</p>
+            <div class="story-cta-row">
+              <a class="story-cta-btn" href="experiential/index.html">experiential portfolio</a>
+              <a class="story-cta-btn" href="aicinematics/index.html">cinematic portfolio</a>
+            </div>
+          </div>
+        </div>
+        <footer class="footer footer-overlay">
+          <span>Vidhi Bansal</span>
+          <a href="#intro">Top</a>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

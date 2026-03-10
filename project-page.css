@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Wavehaus';
+  src: url('https://db.onlinewebfonts.com/t/9efc4acc01284ee3654ef9bfd7253d43.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/9efc4acc01284ee3654ef9bfd7253d43.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wavehaus';
+  src: url('https://db.onlinewebfonts.com/t/cd2de7a34e0fbb4bf2772558e3efa576.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/cd2de7a34e0fbb4bf2772558e3efa576.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --fg-dim: rgba(255, 255, 255, 0.72);
+  --font: "Wavehaus", "Sohne", "Söhne", "Soehne", "Neue Montreal", "NeueMontreal", sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, th {
+  font-weight: 600;
+}
+
+a { color: var(--fg); text-decoration: none; }
+
+/* ---- Back link ---- */
+.back-link {
+  position: fixed;
+  top: 1.2rem;
+  left: 2.5rem;
+  z-index: 10;
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--fg-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--fg); }
+
+/* ---- Project header: top 1/5 of viewport ---- */
+.project-header {
+  height: 20vh;
+  min-height: 140px;
+  max-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  padding-top: 2.5rem;
+  gap: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-header-left {
+  flex: 0 0 auto;
+  max-width: 45%;
+}
+
+.project-header-left h1 {
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+}
+
+.project-header-left .project-subtitle {
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin: 0;
+}
+
+.project-header-right {
+  flex: 1;
+  max-width: 50%;
+}
+
+.project-header-right p {
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--fg-dim);
+  margin: 0;
+}
+
+/* ---- Photo grid ---- */
+.project-gallery {
+  padding: 1.5rem 2.5rem;
+}
+
+/* Uniform top breathing room before first gallery heading */
+.project-header + .gallery-subheading,
+.project-header + .project-gallery .gallery-subheading {
+  margin-top: 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 4px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+/* Wide tiles span 2 columns */
+.gallery-item.wide { grid-column: span 2; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    max-height: none;
+    padding: 3.5rem 2rem 2rem;
+    gap: 1.2rem;
+  }
+
+  .project-header-left,
+  .project-header-right {
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 160px;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-header {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 140px;
+  }
+
+  .gallery-item.wide { grid-column: span 2; }
+
+  .back-link {
+    left: 1.5rem;
+  }
+}

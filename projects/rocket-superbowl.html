@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket SuperBowl — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .video-section {
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .project-video {
+      width: 100%;
+      display: block;
+      background: #000;
+      margin-bottom: 6px;
+    }
+    .gallery-subheading {
+      margin: 0 0 0.9rem;
+      padding: 0 2.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .video-subheading {
+      margin: 0.9rem 0 0.9rem;
+      padding: 0 2.5rem;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.65);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Rocket SuperBowl</h1>
+      <p class="project-subtitle">Cinematic · Commercial</p>
+    </div>
+    <div class="project-header-right">
+      <p>High-energy cinematic spot produced for the SuperBowl broadcast window. Led 3D environment creation and visual effects, delivering broadcast-quality real-time rendered content under tight deadlines.</p>
+    </div>
+  </header>
+
+  <p class="video-subheading">Worked on 2D motion graphics and animatics for the main curved LED in the SuperBowl Rocket arena using assets provided by Rocket Companies in After Effects.</p>
+  <div class="video-section">
+    <video class="project-video" loop muted playsinline preload="auto">
+      <source src="../assets/Rocket Superbowl/RIGHT_Roary_v01.mp4" type="video/mp4" />
+    </video>
+
+    <video class="project-video" loop muted playsinline preload="auto">
+      <source src="../assets/Rocket Superbowl/BRAND_LEFT_V02.mp4" type="video/mp4" />
+    </video>
+
+    <video class="project-video" loop muted playsinline preload="auto">
+      <source src="../assets/Rocket Superbowl/SUPER_RIGHT_v03.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <section class="project-gallery">
+    <h2 class="gallery-subheading">Experience Photos</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="../assets/Rocket Superbowl/rocket01.jpeg" alt="Rocket SuperBowl experience photo 1" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Rocket Superbowl/rocket02.jpeg" alt="Rocket SuperBowl experience photo 2" loading="lazy" /></div>
+      <div class="gallery-item wide"><img src="../assets/Rocket Superbowl/rocket-3.jpeg" alt="Rocket SuperBowl experience photo 3" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <script>
+    setTimeout(function () {
+      document.querySelectorAll('.project-video').forEach(function (v) { v.play(); });
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bumble Holiday Stunt — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 0.5rem;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .select-grid {
+      gap: 8px;
+    }
+    .la-video-grid {
+      margin-top: 10px;
+    }
+    .render-feature {
+      flex: 0 0 100%;
+      max-width: 760px;
+    }
+    .render-video-row {
+      margin-bottom: 10px;
+    }
+    .gallery-item,
+    .gallery-item.wide {
+      flex: 0 1 calc(50% - 5px);
+      max-width: calc(50% - 5px);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0;
+      overflow: hidden;
+    }
+    .select-grid .gallery-item,
+    .select-grid .gallery-item.wide {
+      flex-basis: calc(25% - 6px);
+      max-width: calc(25% - 6px);
+    }
+    .gallery-item img,
+    .gallery-item video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      background: #000;
+      aspect-ratio: 16 / 10;
+      max-height: none;
+    }
+    .gallery-item img.select-media {
+      aspect-ratio: auto;
+      object-fit: contain;
+    }
+    .gallery-subheading {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 2.5rem 0 1rem;
+      padding: 0 2.5rem;
+    }
+    .gallery-subheading:first-of-type {
+      margin-top: 1.5rem;
+    }
+    .project-meta {
+      margin: 0.45rem 0 0;
+      font-size: 0.64rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.58);
+    }
+    .gallery-sublabel {
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.3);
+      margin: 1.5rem 0 0.5rem;
+      padding: 0 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .gallery-grid {
+        justify-content: center;
+      }
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      .select-grid .gallery-item,
+      .select-grid .gallery-item.wide {
+        flex-basis: calc(50% - 4px);
+        max-width: calc(50% - 4px);
+      }
+    }
+    @media (max-width: 600px) {
+      .project-gallery { padding: 0 1.5rem 0.5rem; }
+      .gallery-subheading, .gallery-sublabel { padding: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Bumble Holiday Stunt</h1>
+      <p class="project-subtitle">Experience · Brand Activation</p>
+      <p class="project-meta">Creative Agency: No Hot Ashes<br />Attendees: 2,000<br />Venue: LA and NYC, 3-4 days</p>
+    </div>
+    <div class="project-header-right">
+      <p>Interactive holiday activation designed to help people interact and break the ice. A cozy, wintry experience in LA and NY, it attracted more than 1000 people in each location over a span of 3 days. Was responsible for design, 3D visualization in 3DS Max and Unreal Engine.</p>
+    </div>
+  </header>
+
+  <h2 class="gallery-subheading">Site Photos</h2>
+
+  <p class="gallery-sublabel">LA Site</p>
+  <section class="project-gallery">
+    <div class="gallery-grid select-grid">
+      <div class="gallery-item wide"><img class="select-media" src="../assets/bumble holiday stunt /LA Site/Select 1 - Revised copy.jpg" alt="Bumble LA Site hero" loading="lazy" /></div>
+      <div class="gallery-item"><img class="select-media" src="../assets/bumble holiday stunt /LA Site/Select 2 - Revised copy.jpg" alt="Bumble LA Site photo 1" loading="lazy" /></div>
+      <div class="gallery-item"><img class="select-media" src="../assets/bumble holiday stunt /LA Site/Select 3 - Revised.jpg" alt="Bumble LA Site" loading="lazy" /></div>
+      <div class="gallery-item"><img class="select-media" src="../assets/bumble holiday stunt /LA Site/Select 4.jpg" alt="Bumble LA Site" loading="lazy" /></div>
+      <div class="gallery-item"><img class="select-media" src="../assets/bumble holiday stunt /LA Site/Select 5.jpg" alt="Bumble LA Site" loading="lazy" /></div>
+      <div class="gallery-item"><img class="select-media" src="../assets/bumble holiday stunt /LA Site/Select 6.jpg" alt="Bumble LA Site" loading="lazy" /></div>
+      <div class="gallery-item"><img class="select-media" src="../assets/bumble holiday stunt /LA Site/Select 7.jpg" alt="Bumble LA Site" loading="lazy" /></div>
+    </div>
+    <div class="gallery-grid la-video-grid">
+      <div class="gallery-item"><video class="project-video" muted playsinline preload="metadata" loop><source src="../assets/bumble holiday stunt /LA Site/IMG_7374.MOV" type="video/mp4" /></video></div>
+      <div class="gallery-item"><video class="project-video" muted playsinline preload="metadata" loop><source src="../assets/bumble holiday stunt /LA Site/IMG_9939.MOV" type="video/mp4" /></video></div>
+      <div class="gallery-item"><video class="project-video" muted playsinline preload="metadata" loop><source src="../assets/bumble holiday stunt /LA Site/IMG_9942.MOV" type="video/mp4" /></video></div>
+      <div class="gallery-item"><video class="project-video" muted playsinline preload="metadata" loop><source src="../assets/bumble holiday stunt /LA Site/IMG_9943.MOV" type="video/mp4" /></video></div>
+      <div class="gallery-item"><video class="project-video" muted playsinline preload="metadata" loop><source src="../assets/bumble holiday stunt /LA Site/IMG_9946.MOV" type="video/mp4" /></video></div>
+    </div>
+  </section>
+
+  <h2 class="gallery-subheading">Renders</h2>
+  <section class="project-gallery">
+    <div class="gallery-grid render-video-row">
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /render-first-image.png" alt="Bumble Render entrance image" loading="lazy" /></div>
+      <div class="gallery-item"><video class="project-video" muted playsinline preload="metadata" loop><source src="../assets/bumble holiday stunt /rendervideos/02.mp4" type="video/mp4" /></video></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide"><img src="../assets/bumble holiday stunt /5a183279-25d8-4b0e-bb86-7cae389a4806.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /55773681-484f-4ac2-8bb8-188e7f2bb780.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /694364bf-8b05-4aca-b894-090efc534b81.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /729e0062-4f8a-477a-8688-2aa1c936db3b.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /09ac5287-e6b8-4fe4-8ebb-8dbe19f0d6f0.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item wide"><img src="../assets/bumble holiday stunt /11a2de42-0ce2-4043-97cf-1e419180bcb8.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /0d0afc52-288d-4c08-8575-2d9e65fbdcde.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /23077d0b-7e89-4250-b41d-582267f3aa6e.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /298ec649-bdc1-49c8-8fac-4aac15b80d5c.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /899122b8-0eae-4e7b-ba22-5abb7922c878.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item wide"><img src="../assets/bumble holiday stunt /b655727d-2f79-4e1d-8a7b-a939d8796198.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /c0252198-c211-4e18-b4d0-c853ba7066e1.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/bumble holiday stunt /d6bbbf91-a720-4874-bc9f-4d607b05e867.jpeg" alt="Bumble Render" loading="lazy" /></div>
+      <div class="gallery-item wide"><img src="../assets/bumble holiday stunt /eb88f082-ee45-4bb4-8ef5-1103ff09da4f.png" alt="Bumble Render" loading="lazy" /></div>
+    </div>
+  </section>
+  <script>
+    setTimeout(function () {
+      document.querySelectorAll('.project-video').forEach(function (v) { v.play(); });
+    }, 1000);
+  </script>
+</body>
+</html>

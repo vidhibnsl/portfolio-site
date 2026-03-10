@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidhi Bansal — Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="header">
+    <a href="index.html" class="logo">Vidhi Bansal</a>
+    <nav class="nav">
+      <a href="index.html#intro">Home</a>
+      <a href="index.html#story">Story</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">
+      <span class="menu-btn-line"></span>
+      <span class="menu-btn-line"></span>
+    </button>
+  </header>
+
+  <main class="main">
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <h2 class="contact-heading">Contact</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" name="firstName" placeholder="First Name" required />
+            <input type="text" name="lastName" placeholder="Last Name" required />
+          </div>
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message..." rows="4"></textarea>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <p class="form-success" id="formSuccess" hidden>Thanks for submitting.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Vidhi Bansal</span>
+    <a href="#">Top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

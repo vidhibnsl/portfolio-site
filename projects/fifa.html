@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 0.5rem;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+    .gallery-item,
+    .gallery-item.wide {
+      flex: 0 1 calc(50% - 5px);
+      max-width: calc(50% - 5px);
+      background: transparent;
+      overflow: hidden;
+      border-radius: 0;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 0;
+    }
+    .gallery-grid .gallery-item:nth-child(3) img,
+    .gallery-grid .gallery-item:nth-child(4) img {
+      transform: scale(1.08);
+      transform-origin: center;
+    }
+    .gallery-item.wide {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    .gallery-subheading {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 1.5rem 0 1rem;
+      padding: 0 2.5rem;
+    }
+    @media (max-width: 600px) {
+      .project-gallery { padding: 0 1.5rem 0.5rem; }
+      .gallery-subheading { padding: 0 1.5rem; }
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../experiential/index.html" class="back-link">← Back</a>
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>FIFA 26' Branding Event</h1>
+      <p class="project-subtitle">Experience</p>
+    </div>
+    <div class="project-header-right">
+      <p>Worked on visuals for the pitch for FIFA's branding event before the opening ceremony in 2026 as part of the cinematics team at PHNTM.</p>
+      <p>Responsible for scene assembly, lighting, materials, camera set ups and renders, and post processing in Photoshop.</p>
+    </div>
+  </header>
+  <h2 class="gallery-subheading">Renders</h2>
+  <section class="project-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="../assets/FIFA/fifa-03.png" alt="FIFA render 3" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/fifa-02.png" alt="FIFA render 2" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/fifa-01.jpg" alt="FIFA render 1" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/fifa-04.jpg" alt="FIFA render 4" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/fifa-05.png" alt="FIFA render 5" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/fifa-06.png" alt="FIFA render 6" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/image04.png" alt="FIFA render 10" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/image03.png" alt="FIFA render 9" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/image.png" alt="FIFA render 7" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/FIFA/image02.png" alt="FIFA render 8" loading="lazy" /></div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Marmoom — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 0.5rem;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .gallery-item,
+    .gallery-item.wide {
+      flex: 0 1 calc(33.333% - 7px);
+      max-width: calc(33.333% - 7px);
+      background: transparent;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 12px;
+    }
+    .gallery-subheading {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 1.5rem 0 1rem;
+      padding: 0 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+      }
+    }
+    @media (max-width: 600px) {
+      .project-gallery { padding: 0 1.5rem 0.5rem; }
+      .gallery-subheading { padding: 0 1.5rem; }
+      .gallery-item,
+      .gallery-item.wide {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../experiential/index.html" class="back-link">← Back</a>
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Al Marmoom</h1>
+      <p class="project-subtitle">Experience</p>
+    </div>
+    <div class="project-header-right">
+      <p>Real-time visualizations created using Rhino, Maya, Substance Painter, and Unreal Engine for the Al Marmoom - Film in the Desert concept.</p>
+    </div>
+  </header>
+  <h2 class="gallery-subheading">Renders</h2>
+  <section class="project-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-01.jpg" alt="Al Marmoom render 1" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-02.jpg" alt="Al Marmoom render 2" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-03.png" alt="Al Marmoom render 3" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-04.jpg" alt="Al Marmoom render 4" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-05.jpg" alt="Al Marmoom render 5" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-06.jpg" alt="Al Marmoom render 6" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-07.png" alt="Al Marmoom render 7" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-08.png" alt="Al Marmoom render 8" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-09.png" alt="Al Marmoom render 9" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/Al Marmoom/al-marmoom-10.png" alt="Al Marmoom render 10" loading="lazy" /></div>
+    </div>
+  </section>
+</body>
+</html>

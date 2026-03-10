@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chase Sapphire Lounge — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 0.5rem;
+    }
+    .chase-gallery-grid {
+      display: block;
+    }
+    .chase-gallery-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 6px;
+      width: 100%;
+      align-items: stretch;
+    }
+    .chase-gallery-row:last-child {
+      margin-bottom: 0;
+    }
+    .chase-gallery-item {
+      flex: 0 0 var(--w);
+      max-width: var(--w);
+      overflow: hidden;
+      background: transparent;
+    }
+    .chase-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .gallery-subheading {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 2rem 0 1rem;
+      padding: 0 2.5rem;
+    }
+    .gallery-subheading:first-of-type {
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .chase-gallery-row {
+        flex-wrap: wrap;
+      }
+      .chase-gallery-item {
+        --w: calc(50% - 3px);
+      }
+    }
+    @media (max-width: 600px) {
+      .project-gallery {
+        padding: 0 1.5rem 0.5rem;
+      }
+      .chase-gallery-item {
+        --w: 100%;
+      }
+      .gallery-subheading {
+        padding: 0 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Chase Sapphire Lounge</h1>
+      <p class="project-subtitle">Experience</p>
+    </div>
+    <div class="project-header-right">
+      <p>Immersive guest journey and branded environment concept for a premium lounge experience, blending hospitality, storytelling, and interactive touchpoints.</p>
+    </div>
+  </header>
+
+  <h2 class="gallery-subheading">Renders</h2>
+  <section class="project-gallery">
+    <div class="chase-gallery-grid" data-chase-gallery>
+      <div class="chase-gallery-row">
+        <div class="chase-gallery-item" style="--w:33.333%"><img src="../assets/chase sapphire loounge/chase sapphire lounge.png" alt="Chase Sapphire Lounge render" loading="lazy" /></div>
+        <div class="chase-gallery-item" style="--w:33.333%"><img src="../assets/chase sapphire loounge/CHSE_Cars_2_edited.avif" alt="Chase Sapphire Lounge render" loading="lazy" /></div>
+        <div class="chase-gallery-item" style="--w:33.333%"><img src="../assets/chase sapphire loounge/CHSE_TEST_03.avif" alt="Chase Sapphire Lounge render" loading="lazy" /></div>
+      </div>
+      <div class="chase-gallery-row">
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/render04.jpeg" alt="Chase Sapphire Lounge render" loading="lazy" /></div>
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/render05.jpeg" alt="Chase Sapphire Lounge render" loading="lazy" /></div>
+      </div>
+      <div class="chase-gallery-row">
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/render06.jpeg" alt="Chase Sapphire Lounge render" loading="lazy" /></div>
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/render07.jpeg" alt="Chase Sapphire Lounge render" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="gallery-subheading">Site Photos</h2>
+  <section class="project-gallery">
+    <div class="chase-gallery-grid" data-chase-gallery>
+      <div class="chase-gallery-row">
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/sitephoto0.jpg" alt="Chase Sapphire Lounge site photo" loading="lazy" /></div>
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/sitephoto02.png" alt="Chase Sapphire Lounge site photo" loading="lazy" /></div>
+      </div>
+      <div class="chase-gallery-row">
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/sitephoto03.jpg" alt="Chase Sapphire Lounge site photo" loading="lazy" /></div>
+        <div class="chase-gallery-item" style="--w:50%"><img src="../assets/chase sapphire loounge/sitephoto04.jpg" alt="Chase Sapphire Lounge site photo" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function () {
+      function applyJustifiedRows() {
+        var rows = document.querySelectorAll('.chase-gallery-row');
+        rows.forEach(function (row) {
+          var items = Array.from(row.querySelectorAll('.chase-gallery-item'));
+          if (!items.length) return;
+
+          if (window.innerWidth <= 900) {
+            items.forEach(function (item) {
+              item.style.flex = '';
+              item.style.width = '';
+              item.style.maxWidth = '';
+              item.style.height = '';
+            });
+            return;
+          }
+
+          var rowWidth = row.clientWidth;
+          var rowGap = 6;
+          var totalGap = rowGap * (items.length - 1);
+          var aspectSum = 0;
+
+          items.forEach(function (item) {
+            var img = item.querySelector('img');
+            if (!img) return;
+            var ar = 1;
+            if (img.naturalWidth && img.naturalHeight) {
+              ar = img.naturalWidth / img.naturalHeight;
+            }
+            aspectSum += ar;
+            item.dataset.ar = String(ar);
+          });
+
+          if (!aspectSum) return;
+          var rowHeight = Math.max(150, (rowWidth - totalGap) / aspectSum);
+
+          items.forEach(function (item) {
+            var ar = Number(item.dataset.ar || 1);
+            var itemWidth = rowHeight * ar;
+            item.style.flex = '0 0 ' + itemWidth + 'px';
+            item.style.width = itemWidth + 'px';
+            item.style.maxWidth = itemWidth + 'px';
+            item.style.height = rowHeight + 'px';
+          });
+        });
+      }
+
+      window.addEventListener('load', applyJustifiedRows);
+      window.addEventListener('resize', applyJustifiedRows);
+      document.querySelectorAll('.chase-gallery-item img').forEach(function (img) {
+        img.addEventListener('load', applyJustifiedRows);
+      });
+    })();
+  </script>
+</body>
+</html>

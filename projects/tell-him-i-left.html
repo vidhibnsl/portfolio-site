@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tell Him I Left — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0;
+    }
+    .gallery-grid {
+      display: block;
+    }
+    .gallery-item,
+    .gallery-item.wide {
+      width: 100%;
+      margin: 0 0 6px;
+      grid-column: span 1;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-subheading {
+      margin: 1.2rem 0 0.85rem;
+      padding: 0 2.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .watch-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      padding-bottom: 0.2rem;
+    }
+    .video-section {
+      padding: 0;
+      margin-bottom: 6px;
+    }
+    .project-video {
+      width: 100%;
+      display: block;
+      background: #000;
+      margin: 0 0 6px;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Tell Him I Left</h1>
+      <p class="project-subtitle">Worldbuilding · Short Film</p>
+    </div>
+    <div class="project-header-right">
+      <p>All aspects — design, direction, writing, post. Tools: MAYA, UE, Substance Painter, ZBrush, Speed Tree, World Machine. A short film inspired by childhood experiences of religious indoctrination, following a letter across Malari, Moyali, and the de-militarized seismic forest between them.</p>
+      <a class="watch-link" href="https://www.vidhibansal.com/copy-of-project-page-1-1" target="_blank" rel="noopener noreferrer">Watch Here</a>
+    </div>
+  </header>
+
+  <section class="project-gallery">
+    <h3 class="gallery-subheading">Malari</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_cc519e3c4bfd44c5a4b8edf2aa448e4c~mv2.jpg/v1/fill/w_1960,h_1120,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/interior_malari_house.jpg" alt="Malari interior" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_59313b0ad93748828cfce7a676fefd8e~mv2.jpg/v1/fill/w_1960,h_1120,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/exteriorstreet_edited.jpg" alt="Malari exterior street" loading="lazy" /></div>
+    </div>
+
+    <h3 class="gallery-subheading">Seismic Forest</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item wide"><img src="https://static.wixstatic.com/media/6ee3b8_634f2c0b55bf45f09b1df4dba8cbcbbe~mv2.png/v1/fill/w_1958,h_1108,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/HighresScreenshot00021.png" alt="Seismic Forest concept frame" loading="lazy" /></div>
+    </div>
+
+    <h3 class="gallery-subheading">Moyali</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_d32dc2ab25d8409987b69d7222e38bf4~mv2.jpg/v1/fill/w_1958,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/corner1.jpg" alt="Moyali corner" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://static.wixstatic.com/media/6ee3b8_673b55268eb64c2cbfbe755c628e17e8~mv2.jpg/v1/fill/w_1958,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/intmoyali_edited_edited.jpg" alt="Moyali interior" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <script>
+    setTimeout(function () {
+      document.querySelectorAll('.project-video').forEach(function (v) {
+        v.loop = true;
+        v.muted = true;
+        v.playsInline = true;
+        v.play();
+      });
+    }, 1000);
+  </script>
+</body>
+</html>

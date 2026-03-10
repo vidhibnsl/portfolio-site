@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiential Motion Graphics — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .hero-loop {
+      padding: 0 2.5rem 1.2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .hero-loop video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+    .motion-groups {
+      padding: 0 2.5rem 2rem;
+      display: grid;
+      gap: 1.4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .motion-group {
+      text-align: center;
+    }
+    .motion-group-title {
+      margin: 0 0 0.65rem;
+      font-size: 0.64rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .motion-group.rocket-group .motion-group-title {
+      margin-top: 0.8rem;
+      transform: translateY(10%);
+    }
+    .motion-group-subtitle {
+      margin: 0 0 0.8rem;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.5;
+    }
+    .motion-videos {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .motion-video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+    .motion-group.stack-videos .motion-videos {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    .motion-group.stack-videos .motion-video {
+      width: min(100%, calc(75% - 5px));
+    }
+    .motion-videos .motion-video:only-child {
+      width: min(100%, calc(75% - 5px));
+      justify-self: center;
+    }
+    .motion-videos .motion-video:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      width: min(100%, calc(75% - 5px));
+      justify-self: center;
+    }
+    .motion-group.rocket-group .motion-videos .motion-video:last-child:nth-child(odd) {
+      width: min(100%, calc(60% - 5px));
+    }
+    .motion-group.rocket-group .motion-videos {
+      width: 120%;
+      margin-left: -10%;
+    }
+    .motion-group.rocket-group .motion-videos {
+      grid-template-columns: 1fr;
+      width: 100%;
+      margin-left: 0;
+    }
+    .motion-group.rocket-group .motion-video,
+    .motion-group.rocket-group .motion-videos .motion-video:last-child:nth-child(odd) {
+      width: min(100%, calc(75% - 5px));
+      justify-self: center;
+    }
+    .motion-group.aws-group .motion-videos .motion-video:last-child:nth-child(odd) {
+      width: min(100%, calc(50% - 5px));
+    }
+    @media (max-width: 560px) {
+      .hero-loop {
+        padding: 0 1.5rem 1rem;
+      }
+      .motion-groups {
+        padding: 0 1.5rem 1.5rem;
+      }
+      .motion-video {
+        width: 100%;
+      }
+      .motion-videos .motion-video:only-child {
+        width: 100%;
+      }
+      .motion-group.rocket-group .motion-videos {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../experiential/index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Experiential Motion Graphics</h1>
+      <p class="project-subtitle">Experience</p>
+    </div>
+    <div class="project-header-right">
+      <p>Some 2D and 3D animatic work done for various live projects as well as project pitches with No Hot Ashes.</p>
+    </div>
+  </header>
+
+  <section class="motion-groups">
+    <section class="motion-group rocket-group">
+      <h2 class="motion-group-title">Rocket Superbowl '26</h2>
+      <div class="motion-videos">
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/Rocket Superbowl/BRAND_LEFT_V02.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/Rocket Superbowl/RIGHT_Roary_v01.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay muted playsinline preload="metadata" controls data-start-time="8">
+          <source src="../assets/experiential motion graphics/Rocket Superbowl/SUPER_RIGHT_v03.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="motion-group">
+      <h2 class="motion-group-title">Cisco MWC '26</h2>
+      <div class="motion-videos">
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/CISCO MWC  26'/60fps_Tasman_MWC_LED_LIGHT03.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="motion-group stack-videos">
+      <h2 class="motion-group-title">F1 Roadshow Pitch '24</h2>
+      <div class="motion-videos">
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/F1 Roadshow- Pitch/LED_ScreenVideo_TheRoadshow05 (1).mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/F1 Roadshow- Pitch/LED_ScreenVideo_TheRoadshow_Render02 (1).mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="motion-group aws-group">
+      <h2 class="motion-group-title">AWS Storefront Pitch '25</h2>
+      <div class="motion-videos">
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/AWS Storefront - Pitch/AWS_NRF_Aerial 2.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/AWS Storefront - Pitch/AWS_NRF_StoreFront.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/AWS Storefront - Pitch/AWS_NRF_GenAIAScreens.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="motion-group">
+      <h2 class="motion-group-title">Tommy Hilfiger Fashion Experience '25</h2>
+      <div class="motion-videos">
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="https://video.wixstatic.com/video/6ee3b8_8c6a3b1fbbee49308b549ea55166b64e/720p/mp4/file.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="https://video.wixstatic.com/video/6ee3b8_3b3f26e274364c979624929b5a1bd909/720p/mp4/file.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="https://video.wixstatic.com/video/6ee3b8_e05a6472d9c44ea89073873d4f8ef85d/720p/mp4/file.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="https://video.wixstatic.com/video/6ee3b8_b1b7f9e4eb4a4ee6be8b93055d30fe6c/720p/mp4/file.mp4" type="video/mp4" />
+        </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="https://video.wixstatic.com/video/6ee3b8_b9d8e4773ec24d6694669e6c56e4895f/720p/mp4/file.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.motion-video').forEach(function (v) {
+        var p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(function () {});
+      });
+
+      // Videos with a start offset should always begin (and loop) from that offset.
+      document.querySelectorAll('.motion-video[data-start-time]').forEach(function (v) {
+        var start = Number(v.getAttribute('data-start-time') || 0);
+        if (!Number.isFinite(start) || start <= 0) return;
+        v.loop = false;
+
+        var seekAndPlay = function () {
+          try { v.currentTime = start; } catch (e) {}
+          var p2 = v.play();
+          if (p2 && typeof p2.catch === 'function') p2.catch(function () {});
+        };
+
+        if (v.readyState >= 1) seekAndPlay();
+        v.addEventListener('loadedmetadata', seekAndPlay);
+        v.addEventListener('ended', function () {
+          seekAndPlay();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

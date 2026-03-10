@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mubadala Sail GP &amp; DC Citi Open — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    :root {
+      --mub-gap: 4px;
+      --mub-section-max: 1080px;
+    }
+    .video-section {
+      max-width: var(--mub-section-max);
+      margin: 0 auto 1rem;
+      padding: 0 2rem 0.5rem;
+    }
+    .project-video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: transparent;
+      object-fit: contain;
+      margin: 0 0 var(--mub-gap);
+    }
+    .project-video:last-child {
+      margin-bottom: 0;
+    }
+    .project-video.video-dropshot {
+      width: 48%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gallery-subheading {
+      margin: 0 0 0.9rem;
+      padding: 0 2.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .mubadala-gallery {
+      max-width: var(--mub-section-max);
+      margin: 0 auto 1rem;
+      padding: 0 2rem 0.5rem;
+    }
+    .mub-renders-gallery {
+      max-width: 1280px;
+      padding: 0 1rem 0.5rem;
+    }
+    .mub-site-gallery {
+      max-width: 1280px;
+      padding: 0 1rem 0.5rem;
+    }
+    .mub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--mub-gap);
+    }
+    .mubadala-gallery .gallery-item {
+      background: transparent;
+      overflow: visible;
+      height: auto;
+      display: block;
+    }
+    .mubadala-gallery .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      transition: none !important;
+      transform: none !important;
+    }
+    .mubadala-gallery .gallery-item:hover img {
+      transform: none !important;
+    }
+    .mubadala-gallery .gallery-item.render-last-row {
+      height: 190px;
+      overflow: hidden;
+    }
+    .mubadala-gallery .gallery-item.render-last-row img {
+      height: 100%;
+      object-fit: cover;
+    }
+    .mub-site-row {
+      display: grid;
+      gap: var(--mub-gap);
+      margin-bottom: var(--mub-gap);
+    }
+    .mub-site-row:last-child {
+      margin-bottom: 0;
+    }
+    .mub-site-row-vertical {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .mub-site-row-vertical .gallery-item {
+      height: 340px;
+      overflow: hidden;
+    }
+    .mub-site-row-vertical .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mub-site-row-horizontal {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .mub-site-gallery .gallery-item {
+      height: auto;
+      background: transparent;
+      display: block;
+    }
+    .mub-site-gallery .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .mub-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .mubadala-gallery .gallery-item {
+        height: auto;
+      }
+      .mub-site-row-vertical,
+      .mub-site-row-horizontal {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 560px) {
+      .video-section,
+      .mubadala-gallery {
+        padding: 0 1.5rem 0.5rem;
+      }
+      .gallery-subheading {
+        padding: 0 1.5rem;
+      }
+      .project-video {
+        width: 100%;
+        height: auto;
+      }
+      .mub-grid {
+        grid-template-columns: 1fr;
+      }
+      .mubadala-gallery .gallery-item {
+        height: auto;
+      }
+      .mubadala-gallery .gallery-item img {
+        height: auto;
+      }
+      .mub-site-row-vertical,
+      .mub-site-row-horizontal {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Mubadala Sail GP &amp; DC Citi Open</h1>
+      <p class="project-subtitle">Experience · Live Visuals</p>
+    </div>
+    <div class="project-header-right">
+      <p>Large-scale visual production for the Mubadala-sponsored sailing championship. Developed real-time 3D content for LED displays and broadcast graphics, capturing the energy and scale of the racing event.</p>
+    </div>
+  </header>
+
+  <h2 class="gallery-subheading">Renders</h2>
+  <section class="project-gallery mubadala-gallery mub-renders-gallery">
+    <div class="mub-grid">
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /renders/01.jpg" alt="Mubadala render 1" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /renders/03.jpg" alt="Mubadala render 2" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /renders/04.jpg" alt="Mubadala render 3" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /renders/06.jpg" alt="Mubadala render 5" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /renders/08.jpg" alt="Mubadala render 6" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /renders/render-new-01.png" alt="Mubadala render 7" loading="lazy" /></div>
+      <div class="gallery-item render-last-row"><img src="../assets/mubadala dc citi open /renders/render-new-02.png" alt="Mubadala render 8" loading="lazy" /></div>
+      <div class="gallery-item render-last-row"><img src="../assets/mubadala dc citi open /renders/render-new-04.png" alt="Mubadala render 9" loading="lazy" /></div>
+      <div class="gallery-item render-last-row"><img src="../assets/mubadala dc citi open /renders/render-new-06.png" alt="Mubadala render 10" loading="lazy" /></div>
+    </div>
+  </section>
+  <section class="video-section">
+    <video class="project-video" autoplay loop muted playsinline preload="auto">
+      <source src="../assets/mubadala dc citi open /renders/Main.mp4" type="video/mp4" />
+    </video>
+    <video class="project-video" autoplay loop muted playsinline preload="auto">
+      <source src="../assets/mubadala dc citi open /renders/HorizonRender.mp4" type="video/mp4" />
+    </video>
+    <video class="project-video" autoplay loop muted playsinline preload="auto">
+      <source src="../assets/mubadala dc citi open /renders/HorizonRender02.mp4" type="video/mp4" />
+    </video>
+    <video class="project-video video-dropshot" autoplay loop muted playsinline preload="auto">
+      <source src="../assets/mubadala dc citi open /renders/dropshotrendertrial_04 (2).mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <h2 class="gallery-subheading">Site Photos</h2>
+  <section class="project-gallery mubadala-gallery mub-site-gallery">
+    <div class="mub-site-row mub-site-row-vertical">
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /site/DC Carousel 1.png" alt="Mubadala DC Citi Open vertical photo 1" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /site/DSC05351.jpg" alt="Mubadala DC Citi Open vertical photo 2" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /site/DSC06246.jpg" alt="Mubadala DC Citi Open vertical photo 3" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /site/DSC06966.jpg" alt="Mubadala DC Citi Open vertical photo 4" loading="lazy" /></div>
+    </div>
+    <div class="mub-site-row mub-site-row-horizontal">
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /site/DSC03714.jpg" alt="Mubadala DC Citi Open horizontal photo 1" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /site/DSC03721.jpg" alt="Mubadala DC Citi Open horizontal photo 2" loading="lazy" /></div>
+      <div class="gallery-item"><img src="../assets/mubadala dc citi open /site/DSC05277.jpg" alt="Mubadala DC Citi Open horizontal photo 3" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <script>
+    setTimeout(function () {
+      document.querySelectorAll('.project-video').forEach(function (v) { v.play(); });
+    }, 1000);
+  </script>
+</body>
+</html>
