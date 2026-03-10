@@ -40,18 +40,14 @@
   </header>
 
   <div class="video-section">
-    <video class="project-video" loop muted playsinline preload="auto">
-      <source src="../assets/WDI cruise line/LS_WDI_Forest_DayToSunset_LowRes_01 (1) (1).mp4" type="video/mp4" />
-    </video>
+    <img class="project-video" src="../assets/WDI cruise line/LS_WDI_Forest_SunsetToNight_36 (1) (1).gif" alt="Walt Disney Cruise visual sequence" loading="lazy" />
 
-    <video class="project-video" loop muted playsinline preload="auto">
-      <source src="../assets/WDI cruise line/LS_WDI_Forest_SunsetToNight_36 (1) (1).mp4" type="video/mp4" />
-    </video>
+    <img class="project-video" src="../assets/WDI cruise line/LS_WDI_Forest_SunsetToNight_36 (1) (1).gif" alt="Walt Disney Cruise visual sequence" loading="lazy" />
   </div>
 
   <script>
     setTimeout(function() {
-      document.querySelectorAll('.project-video').forEach(function(v) {
+      document.querySelectorAll('video.project-video').forEach(function(v) {
         v.playbackRate = 2.0;
         v.play();
       });
