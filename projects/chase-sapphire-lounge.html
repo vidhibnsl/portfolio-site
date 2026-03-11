@@ -54,6 +54,29 @@
         --w: calc(50% - 3px);
       }
     }
+    @media (max-width: 768px) {
+      .project-gallery {
+        padding: 0 0.9rem 0.5rem;
+      }
+      .chase-gallery-row {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .chase-gallery-item {
+        --w: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 6px;
+      }
+      .chase-gallery-item:last-child {
+        margin-bottom: 0;
+      }
+      .chase-gallery-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
     @media (max-width: 600px) {
       .project-gallery {
         padding: 0 1.5rem 0.5rem;

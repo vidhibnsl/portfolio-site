@@ -101,6 +101,27 @@
         padding: 0;
       }
     }
+    @media (max-width: 768px) {
+      .concept-renders-row,
+      .site-images-row {
+        display: block;
+      }
+      .concept-renders-row .gallery-item,
+      .site-images-row .gallery-item {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 6px;
+      }
+      .concept-renders-row .gallery-item:last-child,
+      .site-images-row .gallery-item:last-child {
+        margin-bottom: 0;
+      }
+      .site-images-grid .gallery-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
     @media (max-width: 560px) {
       .concept-renders-section,
       .site-images-section {
