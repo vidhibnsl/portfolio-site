@@ -18,7 +18,7 @@
     if (!container || !canvas || typeof THREE === 'undefined') return;
 
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var isMobile = window.innerWidth < 768;
+    var isMobile = window.matchMedia('(max-width: 900px)').matches || window.matchMedia('(pointer: coarse)').matches;
 
     // ---- Scene ----
     var scene = new THREE.Scene();
@@ -74,6 +74,8 @@
     var headingBaseY = 0;
     var headingDropY = 0.12;
     (function initLandscapeHeading() {
+      // Use the flat DOM heading on mobile for a cleaner two-line responsive layout.
+      if (isMobile) return;
       var headingText = 'REAL TIME 3D VISUALIZER | WORLDBUILDER';
       var headingFontStack = '"Space Grotesk", "SpaceGrotesk", "Sohne", "Söhne", "Soehne", "Neue Montreal", "NeueMontreal", "Arial Black", sans-serif';
       var headingCanvas = document.createElement('canvas');
