@@ -3,213 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vidhi Bansal — AI Cinematics</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>AI Cinematics — Under Construction</title>
   <link rel="stylesheet" href="../styles.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <style>
+    .hold-wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hold-card {
+      max-width: 780px;
+    }
+    .hold-title {
+      margin: 0;
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+    .hold-note {
+      margin: 0.9rem 0 1.4rem;
+      color: rgba(244, 243, 239, 0.72);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .hold-link {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(244, 243, 239, 0.45);
+      padding-bottom: 0.25rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <header class="header">
-    <a href="../index.html" class="logo">Vidhi Bansal</a>
-    <nav class="nav">
-      <a href="../index.html">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="../about.html">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="menu-btn" aria-label="Menu">
-      <span class="menu-btn-line"></span>
-      <span class="menu-btn-line"></span>
-    </button>
-  </header>
-
-  <main class="main">
-    <section id="intro" class="hero" data-hero-3d>
-      <div class="hero-fog" aria-hidden="true">
-        <div class="hero-fog-layer"></div>
-        <div class="hero-fog-layer"></div>
-        <div class="hero-fog-layer"></div>
-        <div class="hero-fog-layer"></div>
-        <div class="hero-fog-layer"></div>
-        <div class="hero-fog-layer"></div>
-      </div>
-      <div class="hero-headline" data-hero-content>
-        <p class="hero-label">AI Cinematics</p>
-        <div class="hero-capabilities" data-capabilities>
-          <a href="#proj-f1" class="capability" data-capability>cinematics</a>
-          <a href="#proj-ashes" class="capability" data-capability>worldbuilding</a>
-        </div>
-      </div>
-
-      <div class="hero-terrain" id="heroVisual" aria-hidden="true">
-        <canvas id="heroCanvas"></canvas>
-      </div>
-      <div class="terrain-cursor-cta" id="terrainCursorCta">
-        <div class="ripple-ring"></div>
-        <div class="ripple-ring"></div>
-        <div class="ripple-ring"></div>
-      </div>
-      <a href="#projects" class="hero-scroll-cta" data-scroll aria-label="Scroll down">
-        <svg class="mouse-icon" width="14" height="22" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="18" height="30" rx="9" stroke="currentColor" stroke-width="1"/>
-          <circle class="mouse-wheel" cx="10" cy="10" r="1.5" fill="currentColor"/>
-        </svg>
-      </a>
-    </section>
-
-    <section id="projects" class="projects">
-      <div class="projects-inner">
-        <h2 class="projects-heading">AI Cinematics</h2>
-
-        <div class="projects-grid">
-          <article id="proj-f1" class="project-block" data-project data-href="../projects/f1-roadshow.html">
-            <div class="project-media">
-              <img src="../assets/f1-roadshow-thumb.png" alt="F1 RoadShow" loading="lazy" style="object-fit: cover;" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Cinematic</span>
-              <h3>F1 RoadShow</h3>
-            </div>
-          </article>
-
-          <article id="proj-xeno" class="project-block" data-project data-href="../projects/xenofeminist-agenda.html">
-            <div class="project-media">
-              <img src="../assets/Red Bull projects/HighresScreenshot00001.png" alt="Xenofeminist Agenda" loading="lazy" style="object-fit: cover;" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Cinematic</span>
-              <h3>Xenofeminist Agenda</h3>
-            </div>
-          </article>
-
-          <article id="proj-marvel" class="project-block" data-project data-href="../projects/marvel-magic-the-gathering.html">
-            <div class="project-media">
-              <img src="../assets/marvel-snap-thumb.png" alt="Marvel Snap Cinematic Trailers" loading="lazy" style="object-fit: cover;" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Cinematic</span>
-              <h3>Marvel Snap Cinematic Trailers</h3>
-            </div>
-          </article>
-
-          <article id="proj-rocket" class="project-block" data-project data-href="../projects/rocket-superbowl.html">
-            <div class="project-media">
-              <img src="../assets/Rocket Superbowl/rocket01.jpeg" alt="Rocket SuperBowl" loading="lazy" style="object-fit: cover;" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Cinematic</span>
-              <h3>Rocket SuperBowl</h3>
-            </div>
-          </article>
-
-          <article id="proj-tommy" class="project-block" data-project data-href="../projects/tommy-hilfiger.html">
-            <div class="project-media">
-              <img src="../assets/tommy-hilfiger-thumb.png" alt="Tommy Hilfiger" loading="lazy" style="object-fit: cover;" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Cinematic</span>
-              <h3>Tommy Hilfiger</h3>
-            </div>
-          </article>
-
-          <article id="proj-automotive" class="project-block" data-project data-href="../projects/automotive.html">
-            <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80" alt="Automotive" loading="lazy" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Cinematic</span>
-              <h3>Automotive</h3>
-            </div>
-          </article>
-
-          <article id="proj-ashes" class="project-block" data-project data-href="../projects/ashes-of-ayodhya.html">
-            <div class="project-media">
-              <img src="../assets/AshesofAyodhya/image.jpg" alt="Ashes Of Ayodhya" loading="lazy" style="object-fit: cover;" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Worldbuilding</span>
-              <h3>Ashes Of Ayodhya</h3>
-            </div>
-          </article>
-
-          <article id="proj-tellhim" class="project-block" data-project data-href="../projects/tell-him-i-left.html">
-            <div class="project-media">
-              <img src="../assets/tell-him-i-left-thumb.png" alt="Tell Him I Left" loading="lazy" style="object-fit: cover;" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Worldbuilding</span>
-              <h3>Tell Him I Left</h3>
-            </div>
-          </article>
-
-          <article id="proj-curiouser" class="project-block" data-project data-href="../projects/curiouser-ai.html">
-            <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Worldbuilding</span>
-              <h3>Curiouser AI Web Experience</h3>
-            </div>
-          </article>
-
-          <article id="proj-dishscapes" class="project-block" data-project data-href="../projects/dishscapes.html">
-            <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="DishScapes" loading="lazy" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Worldbuilding</span>
-              <h3>DishScapes</h3>
-            </div>
-          </article>
-
-          <article id="proj-euphoria" class="project-block" data-project data-href="../projects/hbo-euphoria.html">
-            <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80" alt="HBO Euphoria" loading="lazy" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Worldbuilding</span>
-              <h3>HBO · Euphoria</h3>
-            </div>
-          </article>
-
-          <article id="proj-concert-visuals" class="project-block" data-project data-href="../projects/concert-visuals.html">
-            <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=800&q=80" alt="Concert Visuals" loading="lazy" />
-            </div>
-            <div class="project-info">
-              <span class="project-cat">Worldbuilding</span>
-              <h3>Concert Visuals</h3>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="contact-inner">
-        <h2 class="contact-heading">Contact</h2>
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <input type="text" name="firstName" placeholder="First Name" required />
-            <input type="text" name="lastName" placeholder="Last Name" required />
-          </div>
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="text" name="subject" placeholder="Subject" />
-          <textarea name="message" placeholder="Message..." rows="4"></textarea>
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
-        <p class="form-success" id="formSuccess" hidden>Thanks for submitting.</p>
-      </div>
+  <main class="hold-wrap">
+    <section class="hold-card">
+      <h1 class="hold-title">uh oh! this page is under construction</h1>
+      <p class="hold-note">This portfolio section is being updated and will be live again soon.</p>
+      <a class="hold-link" href="../index.html">Back to home</a>
     </section>
   </main>
-
-  <footer class="footer">
-    <span>Vidhi Bansal</span>
-    <a href="#intro">Top</a>
-  </footer>
-
-  <script src="../script.js"></script>
 </body>
 </html>
