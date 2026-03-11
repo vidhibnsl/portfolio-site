@@ -1043,6 +1043,18 @@
 
   // Story parallax video scrub (plays through with scroll, then holds last frame)
   (function initStoryParallax() {
+    if (isMobile) {
+      var mobileStoryVideo = document.getElementById('storyVideo');
+      if (mobileStoryVideo) {
+        mobileStoryVideo.pause();
+        mobileStoryVideo.removeAttribute('src');
+        mobileStoryVideo.querySelectorAll('source').forEach(function (source) {
+          source.removeAttribute('src');
+        });
+        mobileStoryVideo.load();
+      }
+      return;
+    }
     var storySection = document.querySelector('[data-story-parallax]');
     var storyVideo = document.getElementById('storyVideo');
     var storyOverlay = document.getElementById('storyOverlay');

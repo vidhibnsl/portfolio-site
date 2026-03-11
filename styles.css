@@ -1119,6 +1119,26 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 
 /* Responsive */
 @media (max-width: 900px) {
+  .hero {
+    height: 100svh;
+  }
+
+  .hero-fog,
+  .hero-terrain,
+  .terrain-cursor-cta,
+  .hero-scroll-cta {
+    display: none !important;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .nav a[href="#story"],
+  .story-parallax {
+    display: none !important;
+  }
+
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
