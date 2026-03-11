@@ -394,6 +394,10 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   min-height: 3.5rem;
 }
 
+.hero-mobile-note {
+  display: none;
+}
+
 .capability {
   display: inline-block;
   font-size: clamp(1.10rem, 2.94vw, 1.60rem);
@@ -1118,7 +1122,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 900px) and (hover: none) and (pointer: coarse) {
   .hero {
     height: 100svh;
   }
@@ -1215,6 +1219,19 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+
+  .hero-mobile-note {
+    display: block;
+    margin: 0.75rem auto 0;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.52);
   }
 }
 

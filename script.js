@@ -1043,7 +1043,8 @@
 
   // Story parallax video scrub (plays through with scroll, then holds last frame)
   (function initStoryParallax() {
-    if (isMobile) {
+    var isMobileStory = window.matchMedia('(max-width: 900px)').matches || window.matchMedia('(pointer: coarse)').matches;
+    if (isMobileStory) {
       var mobileStoryVideo = document.getElementById('storyVideo');
       if (mobileStoryVideo) {
         mobileStoryVideo.pause();
