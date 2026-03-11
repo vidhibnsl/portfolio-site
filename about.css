@@ -60,36 +60,22 @@ a { color: var(--fg); text-decoration: none; }
   display: flex;
   min-height: 100vh;
   padding: 4rem 3rem 3rem;
-  gap: 4rem;
+  gap: 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .about-left {
-  flex: 0 0 42%;
-  max-width: 42%;
+  flex: 0 0 48%;
+  max-width: 48%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.1rem;
 }
 
 .about-right {
   flex: 1;
-  padding-top: 0.5rem;
-}
-
-/* ---- Photo ---- */
-.about-photo {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  max-height: 360px;
-  overflow: hidden;
-}
-
-.about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(0.15);
+  padding-top: 0.2rem;
 }
 
 /* ---- Bio ---- */
@@ -170,9 +156,5 @@ a { color: var(--fg); text-decoration: none; }
   .about-left {
     flex: none;
     max-width: 100%;
-  }
-
-  .about-photo {
-    max-height: 280px;
   }
 }
