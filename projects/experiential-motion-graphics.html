@@ -91,17 +91,27 @@
     .motion-group.aws-group .motion-videos .motion-video:last-child:nth-child(odd) {
       width: min(100%, calc(50% - 5px));
     }
-    @media (max-width: 560px) {
+    @media (max-width: 768px) {
       .hero-loop {
         padding: 0 1.5rem 1rem;
       }
       .motion-groups {
-        padding: 0 1.5rem 1.5rem;
+        padding: 0 0.9rem 1.5rem;
+      }
+      .motion-videos {
+        grid-template-columns: 1fr !important;
+        gap: 8px;
+      }
+      .motion-group.stack-videos .motion-video,
+      .motion-group.rocket-group .motion-video,
+      .motion-group.rocket-group .motion-videos .motion-video:last-child:nth-child(odd),
+      .motion-videos .motion-video:only-child,
+      .motion-videos .motion-video:last-child:nth-child(odd),
+      .motion-group.aws-group .motion-videos .motion-video:last-child:nth-child(odd) {
+        width: 100%;
+        justify-self: stretch;
       }
       .motion-video {
-        width: 100%;
-      }
-      .motion-videos .motion-video:only-child {
         width: 100%;
       }
       .motion-group.rocket-group .motion-videos {
@@ -134,7 +144,7 @@
         <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
           <source src="../assets/experiential motion graphics/Rocket Superbowl/RIGHT_Roary_v01.mp4" type="video/mp4" />
         </video>
-        <video class="motion-video" autoplay muted playsinline preload="metadata" controls data-start-time="8">
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls data-start-time="8">
           <source src="../assets/experiential motion graphics/Rocket Superbowl/SUPER_RIGHT_v03.mp4" type="video/mp4" />
         </video>
       </div>
