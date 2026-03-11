@@ -167,6 +167,43 @@ a { color: var(--fg); text-decoration: none; }
   }
 }
 
+@media (max-width: 768px) {
+  /* Force one media item per row on all project pages (mobile only). */
+  .project-gallery .gallery-grid,
+  .project-gallery [class*="grid"],
+  .project-gallery [class*="row"] {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+  }
+
+  .project-gallery [class*="grid"],
+  .project-gallery [class*="row"] {
+    display: grid !important;
+    gap: 6px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .project-gallery .gallery-item,
+  .project-gallery .gallery-item.wide {
+    grid-column: span 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+  }
+
+  .project-gallery .gallery-item img,
+  .project-gallery .gallery-item video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    display: block;
+  }
+}
+
 @media (max-width: 560px) {
   .project-header {
     padding: 2.5rem 1.5rem 1.5rem;
