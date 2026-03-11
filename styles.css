@@ -1155,6 +1155,15 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
     display: flex;
   }
 
+  .hero-headline {
+    width: 100%;
+    padding: calc(var(--header-height, 72px) + 2.5rem) 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .capability {
     font-size: clamp(0.95rem, 4.34vw, 1.31rem);
   }
@@ -1171,6 +1180,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   .hero-label span {
     display: block;
     width: 100%;
+    text-align: center;
   }
 
   .hero-label::after {
@@ -1179,6 +1189,12 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 
   .hero.hero-3d-heading-mode .hero-capabilities {
     margin-top: 5.4rem;
+  }
+
+  .hero-capabilities {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
 

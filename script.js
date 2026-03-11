@@ -570,6 +570,18 @@
     // Cursor position in terrain normalised coords
     var cursorU = 0, cursorV = 0, cursorOnTerrain = false;
     var smCurU = 0, smCurV = 0;
+    var hasHoverInput = window.matchMedia('(hover: hover)').matches;
+    var mobileColorPulse = {
+      enabled: isMobile,
+      active: false,
+      timer: 0,
+      nextDelay: 3 + Math.random() * 2,
+      age: 0,
+      duration: 1.9,
+      side: -1,
+      u: 0,
+      v: 0.08
+    };
 
     // Terrain cursor CTA — hide on first interaction
     var terrainCta = document.getElementById('terrainCursorCta');
@@ -690,6 +702,33 @@
       var decayMul = Math.exp(-dt / DECAY_SECONDS);
       var colorDecayMul = Math.exp(-dt / COLOR_DECAY_S);
       var glowDecayMul = Math.exp(-dt / GLOW_DECAY_S);
+
+      // Mobile-only ambient terrain pulse every 3-5 seconds.
+      if (mobileColorPulse.enabled) {
+        mobileColorPulse.timer += dt;
+        if (!mobileColorPulse.active && mobileColorPulse.timer >= mobileColorPulse.nextDelay) {
+          mobileColorPulse.active = true;
+          mobileColorPulse.age = 0;
+          mobileColorPulse.timer = 0;
+          mobileColorPulse.nextDelay = 3 + Math.random() * 2;
+          mobileColorPulse.side *= -1;
+          mobileColorPulse.u = mobileColorPulse.side * (0.34 + Math.random() * 0.08);
+          mobileColorPulse.v = 0.04 + Math.random() * 0.12;
+        }
+
+        if (mobileColorPulse.active) {
+          mobileColorPulse.age += dt;
+          var pulseT = mobileColorPulse.age / mobileColorPulse.duration;
+          if (pulseT >= 1) {
+            mobileColorPulse.active = false;
+            if (!hasHoverInput) cursorOnTerrain = false;
+          } else {
+            cursorOnTerrain = true;
+            cursorU = mobileColorPulse.u;
+            cursorV = mobileColorPulse.v + Math.sin(pulseT * Math.PI) * 0.02;
+          }
+        }
+      }
 
       // Smooth cursor in terrain-space
       if (cursorOnTerrain) {
@@ -1051,6 +1090,7 @@
     }
 
     storyVideo.muted = true;
+    storyVideo.loop = false;
     storyVideo.pause();
     storyVideo.addEventListener('loadedmetadata', function () {
       duration = Number(storyVideo.duration) || 0;
