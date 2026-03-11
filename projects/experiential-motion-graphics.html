@@ -118,6 +118,12 @@
         width: 100%;
         margin-left: 0;
       }
+      .motion-video::-webkit-media-controls {
+        display: none !important;
+      }
+      .motion-video::-webkit-media-controls-enclosure {
+        display: none !important;
+      }
     }
   </style>
 </head>
@@ -155,6 +161,7 @@
       <div class="motion-videos">
         <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
           <source src="../assets/experiential motion graphics/CISCO MWC  26'/60fps_Tasman_MWC_LED_LIGHT03.mp4" type="video/mp4" />
+          <source src="../assets/experiential motion graphics/CISCO MWC 26'/60fps_Tasman_MWC_LED_LIGHT03.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
@@ -210,9 +217,33 @@
 
   <script>
     window.addEventListener('load', function () {
+      var isMobile = window.matchMedia('(max-width: 900px)').matches || window.matchMedia('(pointer: coarse)').matches;
+
       document.querySelectorAll('.motion-video').forEach(function (v) {
+        if (isMobile) {
+          // Keep mobile playback seamless and hide native transport UI.
+          v.controls = false;
+          v.removeAttribute('controls');
+          v.setAttribute('playsinline', '');
+          v.setAttribute('webkit-playsinline', '');
+          v.muted = true;
+          v.defaultMuted = true;
+          v.autoplay = true;
+          v.loop = true;
+          v.preload = 'auto';
+        }
         var p = v.play();
         if (p && typeof p.catch === 'function') p.catch(function () {});
+        if (isMobile) {
+          v.addEventListener('pause', function () {
+            var p3 = v.play();
+            if (p3 && typeof p3.catch === 'function') p3.catch(function () {});
+          });
+          v.addEventListener('canplay', function () {
+            var p4 = v.play();
+            if (p4 && typeof p4.catch === 'function') p4.catch(function () {});
+          });
+        }
       });
 
       // Videos with a start offset should always begin (and loop) from that offset.
