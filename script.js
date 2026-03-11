@@ -1087,10 +1087,6 @@
       var scale = 1.08 - progress * 0.06;
       storyVideo.style.transform = 'scale(' + scale.toFixed(3) + ')';
 
-      // Fade video in from black at the start of the section.
-      var fadeProgress = clamp(progress / 0.096, 0, 1);
-      storySection.style.setProperty('--story-fade', (1 - fadeProgress).toFixed(3));
-
       if (storyOverlay) {
         storyOverlay.classList.toggle('show', progress >= 0.98);
       }

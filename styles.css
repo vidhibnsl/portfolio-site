@@ -705,7 +705,6 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   position: relative;
   height: 198vh;
   background: #000;
-  --story-fade: 1;
 }
 
 .story-sticky {
@@ -716,13 +715,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 }
 
 .story-sticky::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #000;
-  opacity: var(--story-fade);
-  z-index: 2;
-  pointer-events: none;
+  display: none;
 }
 
 .story-video {
