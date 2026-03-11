@@ -167,9 +167,9 @@
 
         // Subtle letter glow pass (drawn from text only).
         hctx.save();
-        hctx.shadowColor = 'rgba(224, 231, 245, 0.65)';
-        hctx.shadowBlur = 18;
-        hctx.fillStyle = 'rgba(236, 241, 250, 0.2)';
+        hctx.shadowColor = 'rgba(224, 231, 245, 0.455)';
+        hctx.shadowBlur = 13;
+        hctx.fillStyle = 'rgba(236, 241, 250, 0.14)';
         drawTrackedText(hctx, headingText, headingCanvas.width * 0.5, headingCanvas.height * 0.5, trackingPx);
         hctx.restore();
       }
@@ -216,9 +216,9 @@
       var gctx = glowCanvas.getContext('2d');
       if (gctx) {
         var g = gctx.createRadialGradient(256, 64, 0, 256, 64, 248);
-        g.addColorStop(0.0, 'rgba(185, 210, 255, 0.112)');
-        g.addColorStop(0.25, 'rgba(182, 203, 236, 0.063)');
-        g.addColorStop(0.5, 'rgba(168, 188, 218, 0.021)');
+        g.addColorStop(0.0, 'rgba(185, 210, 255, 0.078)');
+        g.addColorStop(0.25, 'rgba(182, 203, 236, 0.044)');
+        g.addColorStop(0.5, 'rgba(168, 188, 218, 0.015)');
         g.addColorStop(0.72, 'rgba(0, 0, 0, 0)');
         g.addColorStop(1.0, 'rgba(0, 0, 0, 0)');
         gctx.fillStyle = g;
