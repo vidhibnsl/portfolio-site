@@ -159,7 +159,7 @@
     <section class="motion-group">
       <h2 class="motion-group-title">Cisco MWC '26</h2>
       <div class="motion-videos">
-        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls data-mobile-src="../assets/experiential-motion-graphics/cisco-mwc-26-mobile.mp4">
           <source src="../assets/experiential-motion-graphics/cisco-mwc-26.mp4" type="video/mp4" />
           <source src="../assets/experiential motion graphics/CISCO MWC  26'/60fps_Tasman_MWC_LED_LIGHT03.mp4" type="video/mp4" />
         </video>
@@ -220,6 +220,10 @@
       var isMobile = window.matchMedia('(max-width: 900px)').matches || window.matchMedia('(pointer: coarse)').matches;
 
       document.querySelectorAll('.motion-video').forEach(function (v) {
+        if (isMobile && v.dataset.mobileSrc) {
+          v.innerHTML = '<source src="' + v.dataset.mobileSrc + '" type="video/mp4" />';
+          v.load();
+        }
         if (isMobile) {
           // Keep mobile playback seamless and hide native transport UI.
           v.controls = false;
