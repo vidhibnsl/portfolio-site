@@ -9,6 +9,9 @@
     .video-section {
       padding: 0 2.5rem;
       margin-bottom: 2rem;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .video-label {
       font-size: 0.85rem;
@@ -30,7 +33,7 @@
   </style>
 </head>
 <body>
-  <a href="../experiential/index.html" class="back-link">← Back</a>
+  <a href="../aicinematics/index.html" class="back-link cinematics-back-link">← Back</a>
 
   <header class="project-header">
     <div class="project-header-left">
@@ -44,15 +47,26 @@
 
   <div class="video-section">
     <p class="video-label">The Power Cosmic</p>
-    <video class="project-video" controls playsinline preload="metadata">
+    <video class="project-video" controls autoplay muted playsinline webkit-playsinline preload="auto">
       <source src="https://video.wixstatic.com/video/6ee3b8_175245401d284bdcb52456a0c9b3be4f/720p/mp4/file.mp4" type="video/mp4" />
     </video>
 
     <p class="video-label">The Savage Land</p>
-    <video class="project-video" controls playsinline preload="metadata">
+    <video class="project-video" controls autoplay muted playsinline webkit-playsinline preload="auto">
       <source src="https://video.wixstatic.com/video/6ee3b8_8e5a1cde8fcf4e878224afdeda7dba2a/720p/mp4/file.mp4" type="video/mp4" />
     </video>
   </div>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.project-video').forEach(function (video) {
+        video.muted = true;
+        video.defaultMuted = true;
+        var playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(function () {});
+      });
+    });
+  </script>
 
 </body>
 </html>

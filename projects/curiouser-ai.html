@@ -5,9 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curiouser AI Web Experience — Vidhi Bansal</title>
   <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 2rem;
+      overflow-x: hidden;
+    }
+    .hero-shot,
+    .media-item {
+      margin: 0 0 8px;
+    }
+    .hero-shot {
+      background: #050505;
+    }
+    .hero-shot img,
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .brand-wide-row {
+      margin: 0 0 8px;
+    }
+    .brand-wide-row img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .brand-mosaic {
+      display: grid;
+      gap: 8px;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .brand-row {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      align-items: stretch;
+    }
+    .brand-row .media-item {
+      display: block;
+      flex: 0 0 auto;
+      margin: 0;
+      background: transparent;
+    }
+    .brand-row .media-item img,
+    .brand-row .media-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: transparent;
+    }
+    .gallery-subheading {
+      margin: 1rem 0 0.7rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.68);
+    }
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 768px) {
+      .project-gallery {
+        padding: 0 0.9rem 1.5rem;
+      }
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+      .brand-row {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .brand-row .media-item {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
-  <a href="../experiential/index.html" class="back-link">← Back</a>
+  <a href="../aicinematics/index.html" class="back-link cinematics-back-link">← Back</a>
 
   <header class="project-header">
     <div class="project-header-left">
@@ -15,29 +103,126 @@
       <p class="project-subtitle">Worldbuilding · Interactive Web</p>
     </div>
     <div class="project-header-right">
-      <p>AI-driven interactive web experience blending generative worlds with user exploration. Designed procedural 3D environments and built the real-time rendering pipeline that powered the browser-based experience.</p>
+      <p>Worked as Creative director in developing UI concepts for gamifying their product for enhanced engagement, using world building inspired by Alice in Wonderland. Tools used: Unreal Engine, Midjourney, Stable Diffusion, ComfyUI and Adobe Suite.</p>
     </div>
   </header>
 
   <section class="project-gallery">
-    <div class="gallery-grid">
-      <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1557683316-ef3c4a7e9c6?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1557683316-ef3c4a7e9c6?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80" alt="Curiouser AI Web Experience" loading="lazy" /></div>
+    <h3 class="gallery-subheading">Product Gamification Concepts</h3>
+    <div class="media-grid product-gamification-grid">
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="auto"><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid05.mp4" type="video/mp4" /><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid05.mov" type="video/quicktime" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid02.mp4" type="video/mp4" /><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid02.mov" type="video/quicktime" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid03.mp4" type="video/mp4" /><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid03.mov" type="video/quicktime" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid04.mp4" type="video/mp4" /><source src="../aicinematics/assets/CuriouserAI Web Experience/ProductGamificationConcepts/vid04.mov" type="video/quicktime" /></video></figure>
+    </div>
+
+    <h3 class="gallery-subheading">Brand Development Concepts</h3>
+    <div class="brand-mosaic">
+      <div class="brand-row">
+        <figure class="media-item" data-ar="0.349"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/10 STEPHEN APPROVED - LATEST VERSION.jpg" alt="Curiouser Stephen approved concept board" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="0.442"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/Desktop - 10.png" alt="Curiouser desktop concept tall frame" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="0.566"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/6faabe090d6516ec317bc2bc0f7e0c4d5c847a5d.png" alt="Curiouser vertical concept frame" loading="lazy" /></figure>
+      </div>
+      <div class="brand-row">
+        <figure class="media-item" data-ar="1.778"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/THUNDERALICE.png" alt="Curiouser character concept thunderalice" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="1.538"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/animalicebinoc (1).png" alt="Curiouser character concept with binoculars" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="0.972"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/2c9c9f600e8966cb6025f375737abe87a3942376.png" alt="Curiouser stylized concept frame 1" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="1.778"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/6aa66a166ce5d43c1c5c60f1ad288c200fa49aee.png" alt="Curiouser stylized concept frame 2" loading="lazy" /></figure>
+      </div>
+      <div class="brand-row">
+        <figure class="media-item" data-ar="1.746"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/75.png" alt="Curiouser concept frame 75" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="1.784"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/image (76).png" alt="Curiouser image concept 76" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="1.784"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/image-1.png" alt="Curiouser image concept variation 1" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="1.391"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/image.png" alt="Curiouser image concept base" loading="lazy" /></figure>
+      </div>
+      <div class="brand-row">
+        <figure class="media-item" data-ar="1.778"><img src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/solutionpng.png" alt="Curiouser concept solution frame" loading="lazy" /></figure>
+        <figure class="media-item" data-ar="1.778"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/CuriouserAI Web Experience/Brand Development Concepts/silhouettewalkingtowardblindinglight.mp4" type="video/mp4" /></video></figure>
+      </div>
     </div>
   </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      var projectVideos = document.querySelectorAll('.project-video');
+      var brandRows = document.querySelectorAll('.brand-row');
+
+      function playVideo(video) {
+        video.loop = true;
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+        video.autoplay = true;
+        var playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(function () {});
+      }
+
+      if (!('IntersectionObserver' in window)) {
+        projectVideos.forEach(function (video) {
+          playVideo(video);
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var video = entry.target;
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
+            playVideo(video);
+          } else {
+            video.pause();
+          }
+        });
+      }, {
+        rootMargin: '0px 0px 120px 0px',
+        threshold: [0.15, 0.45]
+      });
+
+      projectVideos.forEach(function (video) {
+        observer.observe(video);
+      });
+
+      function applyBrandMosaicRows() {
+        brandRows.forEach(function (row) {
+          var items = Array.from(row.querySelectorAll('.media-item'));
+          if (!items.length) return;
+
+          if (window.innerWidth <= 768) {
+            items.forEach(function (item) {
+              item.style.width = '';
+              item.style.height = '';
+            });
+            return;
+          }
+
+          var gap = 8;
+          var totalGap = gap * (items.length - 1);
+          var rowWidth = row.clientWidth;
+          var aspectSum = 0;
+
+          items.forEach(function (item) {
+            var ar = Number(item.getAttribute('data-ar') || 1);
+            if (!Number.isFinite(ar) || ar <= 0) ar = 1;
+            aspectSum += ar;
+          });
+
+          if (!aspectSum || rowWidth <= totalGap) return;
+          var rowHeight = (rowWidth - totalGap) / aspectSum;
+
+          items.forEach(function (item) {
+            var ar = Number(item.getAttribute('data-ar') || 1);
+            if (!Number.isFinite(ar) || ar <= 0) ar = 1;
+            item.style.width = (rowHeight * ar) + 'px';
+            item.style.height = rowHeight + 'px';
+          });
+        });
+      }
+
+      applyBrandMosaicRows();
+      window.addEventListener('resize', applyBrandMosaicRows);
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ghost's Retaliation — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 2rem;
+    }
+    .hero-shot,
+    .media-item {
+      margin: 0 0 8px;
+      background: #050505;
+    }
+    .hero-shot {
+      width: 90%;
+      margin: 0 auto 8px;
+    }
+    .hero-shot video,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    @media (max-width: 768px) {
+      .project-gallery {
+        padding: 0 0.9rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../aicinematics/index.html" class="back-link cinematics-back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>The Ghost's Retaliation</h1>
+      <p class="project-subtitle">Cinematic · Sequence Development</p>
+    </div>
+    <div class="project-header-right">
+      <p>A short climate fiction story about ghost towns created using only images sourced from remote sensing and then edited subtly for narrative purposes. Remote sensing images were manipulated using GPT-1.</p>
+    </div>
+  </header>
+
+  <section class="project-gallery">
+    <figure class="hero-shot">
+      <video class="project-video" controls autoplay loop muted playsinline preload="metadata">
+        <source src="../aicinematics/assets/theghostsretaliation/videoplayback (2).mp4" type="video/mp4" />
+      </video>
+    </figure>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.project-video').forEach(function (video) {
+        var playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(function () {});
+      });
+    });
+  </script>
+</body>
+</html>

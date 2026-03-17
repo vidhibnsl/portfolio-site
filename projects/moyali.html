@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moyali — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 2rem;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .hero-shot,
+    .media-item {
+      margin: 0 0 8px;
+      background: #050505;
+    }
+    .hero-shot img,
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    @media (max-width: 768px) {
+      .project-gallery {
+        width: 100%;
+        padding: 0 0.9rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../aicinematics/index.html" class="back-link cinematics-back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Moyali</h1>
+      <p class="project-subtitle">Worldbuilding · Cinematic Environment</p>
+    </div>
+    <div class="project-header-right">
+      <p>Moyali is a world that glorifies inner sanctity and peace to the extent that any form of self expression is banned, and celibacy, meditation and abstention are mandated.</p>
+    </div>
+  </header>
+
+  <section class="project-gallery">
+    <figure class="hero-shot">
+      <img src="../aicinematics/assets/Moyali/intmoyali_edited_edited.jpg" alt="Moyali hero interior frame" loading="eager" />
+    </figure>
+    <div class="media-grid">
+      <figure class="media-item"><img src="../aicinematics/assets/Moyali/moyali-shot-02.png" alt="Moyali environment still" loading="lazy" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/Moyali/moyali-shot-03.png" alt="Moyali close-up detail still" loading="lazy" /></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/Moyali/PAPERANIM.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><img src="https://cdna.artstation.com/p/assets/images/images/054/347/022/large/vidhi-bansal-capture55.jpg?1664327477" alt="Moyali reference still from ArtStation" loading="lazy" /></figure>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.project-video').forEach(function (video) {
+        var playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(function () {});
+      });
+    });
+  </script>
+</body>
+</html>

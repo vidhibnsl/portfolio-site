@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malari — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 2rem;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .hero-shot,
+    .media-item {
+      margin: 0 0 8px;
+      background: #050505;
+    }
+    .hero-shot img,
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    @media (max-width: 768px) {
+      .project-gallery {
+        width: 100%;
+        padding: 0 0.9rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../aicinematics/index.html" class="back-link cinematics-back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Malari</h1>
+      <p class="project-subtitle">Worldbuilding · Cinematic Environment</p>
+    </div>
+    <div class="project-header-right">
+      <p>Malari is a world where theism is overarching, visible in every nook and corner, through ornate art and brutalism. Poverty is shrowded in the shadows of the deity, which has brought inhabitants to a trance of sobriety.</p>
+    </div>
+  </header>
+
+  <section class="project-gallery">
+    <div class="media-grid">
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/MALARI/THRUBLDGS.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/MALARI/turntablemalari.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/MALARI/favelaforartstation.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/MALARI/interior_walkingout1.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/MALARI/HighresScreenshot00013.png" alt="Malari hero shot" loading="eager" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/MALARI/interior_malari_house.jpg" alt="Malari interior house environment" loading="lazy" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/MALARI/exteriorstreet.jpg" alt="Malari exterior street frame" loading="lazy" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/MALARI/modulesbldg.jpg" alt="Malari modular buildings frame" loading="lazy" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/MALARI/artbook32.jpg" alt="Malari artbook development frame" loading="lazy" /></figure>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.project-video').forEach(function (video) {
+        var playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(function () {});
+      });
+    });
+  </script>
+</body>
+</html>

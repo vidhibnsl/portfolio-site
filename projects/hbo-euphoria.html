@@ -5,9 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HBO · Euphoria — Vidhi Bansal</title>
   <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 2rem;
+    }
+    .hero-shot,
+    .media-item {
+      margin: 0 0 8px;
+      background: #050505;
+    }
+    .hero-shot img,
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    @media (max-width: 768px) {
+      .project-gallery {
+        padding: 0 0.9rem 1.5rem;
+      }
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <a href="../experiential/index.html" class="back-link">← Back</a>
+  <a href="../aicinematics/index.html" class="back-link cinematics-back-link">← Back</a>
 
   <header class="project-header">
     <div class="project-header-left">
@@ -15,29 +46,29 @@
       <p class="project-subtitle">Worldbuilding · RnD</p>
     </div>
     <div class="project-header-right">
-      <p>Leading cinematics and render style research for HBO's Euphoria at PHNTM. Explored experimental visual techniques and lighting approaches in Unreal Engine to develop unique stylized render pipelines.</p>
+      <p>As part of the cinematics team at PHNTM, worked on researching cinematic render styles and reimagined the bar from HBO Euphoria in a warm toned, cinematic atmospheric style.</p>
     </div>
   </header>
 
   <section class="project-gallery">
-    <div class="gallery-grid">
-      <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1514525253161-92b757e7b5c9?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1514525253161-92b757e7b5c9?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80" alt="HBO · Euphoria" loading="lazy" /></div>
+    <figure class="media-item">
+      <video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/HBO Euphoria- Render Styles/HULU_EUPH_Ext_Video_05.mp4" type="video/mp4" /></video>
+    </figure>
+    <div class="media-grid">
+      <figure class="hero-shot"><img src="../aicinematics/assets/HBO Euphoria- Render Styles/INT_Euph_int_04_wide_v05.jpeg" alt="HBO Euphoria hero render style frame" loading="eager" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/HBO Euphoria- Render Styles/INT_Euph_Ext_01_v01_edited.jpg" alt="HBO Euphoria exterior render style frame" loading="lazy" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/HBO Euphoria- Render Styles/INT_Euph_Ext_01_v01_edited (1).jpg" alt="HBO Euphoria render style variation" loading="lazy" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/HBO Euphoria- Render Styles/postprocess_render10_edited.jpg" alt="HBO Euphoria post process render" loading="lazy" /></figure>
     </div>
   </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.project-video').forEach(function (video) {
+        var playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(function () {});
+      });
+    });
+  </script>
 </body>
 </html>

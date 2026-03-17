@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seismic Forest — Vidhi Bansal</title>
+  <link rel="stylesheet" href="../project-page.css" />
+  <style>
+    .project-gallery {
+      padding: 0 2.5rem 2rem;
+    }
+    .project-header {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .project-gallery {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .project-gallery {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .hero-shot,
+    .media-item {
+      margin: 0 0 8px;
+      background: #050505;
+    }
+    .hero-shot img,
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    @media (max-width: 768px) {
+      .project-gallery {
+        width: 100%;
+      }
+      .project-gallery {
+        padding: 0 0.9rem 1.5rem;
+      }
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../aicinematics/index.html" class="back-link cinematics-back-link">← Back</a>
+
+  <header class="project-header">
+    <div class="project-header-left">
+      <h1>Seismic Forest</h1>
+      <p class="project-subtitle">Worldbuilding · Cinematic Environment</p>
+    </div>
+    <div class="project-header-right">
+      <p>Seismic Forest world built for the short film 'Tell Him I Left', which is still in production. The seismic forest represents a sanctuary at the border of two countries that have been at war for the last millenia. People that live here have learnt to adapt to its tumultuous veins and find a certain sense of peace away from the wrath of human extremism.</p>
+    </div>
+  </header>
+
+  <section class="project-gallery">
+    <div class="media-grid">
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/Seismic Forest/two houses cinematic shot.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/Seismic Forest/Forester_frombelow.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><video class="project-video" autoplay loop muted playsinline preload="metadata"><source src="../aicinematics/assets/Seismic Forest/borderreveal.mp4" type="video/mp4" /></video></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/Seismic Forest/foresttwohouses.jpg" alt="Seismic Forest hero frame" loading="eager" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/Seismic Forest/HighresScreenshot00019_edited.jpg" alt="Seismic Forest concept screenshot" loading="lazy" /></figure>
+      <figure class="media-item"><img src="../aicinematics/assets/Seismic Forest/seismic houses of the forest.jpg" alt="Seismic Forest houses frame" loading="lazy" /></figure>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.project-video').forEach(function (video) {
+        var playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(function () {});
+      });
+    });
+  </script>
+</body>
+</html>
