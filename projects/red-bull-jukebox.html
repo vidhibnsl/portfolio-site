@@ -38,6 +38,10 @@
       max-width: 82vw;
       margin: 0 auto;
     }
+    .rb-jukebox-grid {
+      grid-template-columns: 1fr;
+      max-width: 98vw;
+    }
     .rb-grid-five .gallery-item:last-child {
       grid-column: 1 / -1;
       max-width: calc((100% - 6px) / 2);
@@ -55,6 +59,9 @@
       object-position: center;
       display: block;
       transform: scale(1.08);
+    }
+    .rb-jukebox-grid .gallery-item img {
+      transform: scale(1.2);
     }
     @media (max-width: 700px) {
       .gallery-subheading {
@@ -97,7 +104,7 @@
 
   <h2 class="gallery-subheading">Jukebox</h2>
   <section class="project-gallery rb-gallery">
-    <div class="rb-grid">
+    <div class="rb-grid rb-jukebox-grid">
       <div class="gallery-item"><img src="../assets/Red Bull projects/cd3fb157-6b68-40e1-91a7-5ab600ff42df.png" alt="Red Bull Jukebox render" loading="lazy" /></div>
       <div class="gallery-item"><img src="../assets/Red Bull projects/da86ae79-fb6a-4085-8b0a-f64172c584ae.png" alt="Red Bull Jukebox render" loading="lazy" /></div>
     </div>
