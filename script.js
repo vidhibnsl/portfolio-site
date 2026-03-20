@@ -86,7 +86,7 @@
 
       hctx.textAlign = 'center';
       hctx.textBaseline = 'middle';
-      var fontPx = 150;
+      var fontPx = 165;
       var trackingPx = fontPx * 0.13; // broader baseline spacing
       function extraGapForChar(ch, baseTracking) {
         // Narrow glyphs need a little extra right-side air to avoid visual collisions.
@@ -128,7 +128,7 @@
       }
       function renderHeadingTexture() {
         hctx.clearRect(0, 0, headingCanvas.width, headingCanvas.height);
-        fontPx = 150;
+        fontPx = 165;
         trackingPx = fontPx * 0.13;
         hctx.font = '500 ' + fontPx + 'px ' + headingFontStack;
         var maxTextWidth = headingCanvas.width * 0.92;
@@ -153,25 +153,7 @@
         hctx.fillStyle = grad;
         drawTrackedText(hctx, headingText, headingCanvas.width * 0.5, headingCanvas.height * 0.5, trackingPx);
 
-        // Silver sheen clipped to text glyphs only.
-        var sheen = hctx.createLinearGradient(0, 0, headingCanvas.width, 0);
-        sheen.addColorStop(0.0, 'rgba(190, 196, 210, 0.05)');
-        sheen.addColorStop(0.28, 'rgba(218, 224, 235, 0.38)');
-        sheen.addColorStop(0.5, 'rgba(245, 247, 252, 0.62)');
-        sheen.addColorStop(0.72, 'rgba(216, 223, 235, 0.34)');
-        sheen.addColorStop(1.0, 'rgba(185, 192, 205, 0.05)');
-        hctx.globalCompositeOperation = 'source-atop';
-        hctx.fillStyle = sheen;
-        hctx.fillRect(0, 0, headingCanvas.width, headingCanvas.height);
-        hctx.globalCompositeOperation = 'source-over';
-
-        // Subtle letter glow pass (drawn from text only).
-        hctx.save();
-        hctx.shadowColor = 'rgba(224, 231, 245, 0.455)';
-        hctx.shadowBlur = 13;
-        hctx.fillStyle = 'rgba(236, 241, 250, 0.14)';
-        drawTrackedText(hctx, headingText, headingCanvas.width * 0.5, headingCanvas.height * 0.5, trackingPx);
-        hctx.restore();
+        // Keep heading clean without additional white glow overlays.
       }
       renderHeadingTexture();
 
@@ -186,7 +168,7 @@
         }).catch(function () {});
       }
 
-      var headingGeo = new THREE.PlaneGeometry(5.13912, 0.960204); // 30% smaller than previous size
+      var headingGeo = new THREE.PlaneGeometry(5.653032, 1.0562244); // 10% larger than current size
       landscapeHeading = new THREE.Group();
 
       for (var layer = 14; layer >= 0; layer--) {
@@ -208,38 +190,6 @@
         layerMesh.position.y = layer * 0.0015;
         landscapeHeading.add(layerMesh);
       }
-
-      // Soft hover glow under the heading.
-      var glowCanvas = document.createElement('canvas');
-      glowCanvas.width = 512;
-      glowCanvas.height = 128;
-      var gctx = glowCanvas.getContext('2d');
-      if (gctx) {
-        var g = gctx.createRadialGradient(256, 64, 0, 256, 64, 248);
-        g.addColorStop(0.0, 'rgba(185, 210, 255, 0.078)');
-        g.addColorStop(0.25, 'rgba(182, 203, 236, 0.044)');
-        g.addColorStop(0.5, 'rgba(168, 188, 218, 0.015)');
-        g.addColorStop(0.72, 'rgba(0, 0, 0, 0)');
-        g.addColorStop(1.0, 'rgba(0, 0, 0, 0)');
-        gctx.fillStyle = g;
-        gctx.fillRect(0, 0, 512, 128);
-      }
-      var glowTex = new THREE.CanvasTexture(glowCanvas);
-      glowTex.minFilter = THREE.LinearFilter;
-      glowTex.magFilter = THREE.LinearFilter;
-      var glowMat = new THREE.SpriteMaterial({
-        map: glowTex,
-        transparent: true,
-        opacity: 0,
-        depthWrite: false,
-        depthTest: true
-      });
-      glowMat.userData.baseOpacity = 0;
-      glowMat.opacity = 0;
-      var glowSprite = new THREE.Sprite(glowMat);
-      glowSprite.scale.set(6.3, 0.95, 1);
-      glowSprite.position.set(0, -0.43, -0.04);
-      landscapeHeading.add(glowSprite);
 
       // Move title to the terrain middle/front, in front of the main center peak.
       headingBaseY = 1.38;
