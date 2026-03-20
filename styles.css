@@ -1155,8 +1155,12 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   .hero-capabilities .capability {
     font-size: clamp(0.9rem, 3.9vw, 1.12rem);
     letter-spacing: 0.07em;
-    padding: 0.38rem 0.8rem 0.34rem;
-    border: 1px solid rgba(255, 255, 255, 0.34);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 0.13rem 0.32rem 0.12rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 999px;
     line-height: 1;
     color: rgba(255, 255, 255, 0.86);
