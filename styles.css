@@ -402,9 +402,6 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   100% { opacity: 1; transform: translateY(0);   filter: blur(0); }
 }
 
-.capability.revealed {
-}
-
 .capability[data-capability]:nth-child(1).revealed,
 .capability[data-capability]:nth-child(1):hover {
   color: #6ec8e0;
@@ -1158,8 +1155,8 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    padding: 0.13rem 0.32rem 0.12rem;
+    width: 12.2ch;
+    padding: 0.09rem 0.32rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 999px;
     line-height: 1;
