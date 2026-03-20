@@ -2,6 +2,8 @@
   'use strict';
 
   const header = document.querySelector('.header');
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('.nav');
   const projects = document.querySelectorAll('[data-project]');
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
@@ -9,6 +11,48 @@
   const cursorRing = document.getElementById('cursorRing');
 
   const hero = document.querySelector('[data-hero-3d]');
+
+  (function initMobileMenu() {
+    if (!header || !menuBtn || !nav) return;
+
+    function closeMenu() {
+      header.classList.remove('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      header.classList.add('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-controls', 'site-nav');
+    if (!nav.id) nav.id = 'site-nav';
+
+    menuBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (header.classList.contains('menu-open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        closeMenu();
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!header.classList.contains('menu-open')) return;
+      if (!header.contains(e.target)) closeMenu();
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 640) closeMenu();
+    });
+  })();
 
   // —— Wireframe Terrain: clean from scratch ——
   // Cursor proximity makes peaks grow taller. Everything else stays still.
