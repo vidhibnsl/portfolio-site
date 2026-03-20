@@ -45,6 +45,13 @@
       color: rgba(255, 255, 255, 0.65);
       line-height: 1.5;
     }
+    .video-source-caption {
+      margin: 0.5rem 0 0;
+      font-size: 0.58rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+    }
     .motion-videos {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -156,14 +163,18 @@
       </div>
     </section>
 
-    <section class="motion-group">
+    <section class="motion-group stack-videos">
       <h2 class="motion-group-title">Cisco MWC '26</h2>
       <div class="motion-videos">
         <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls data-mobile-src="../assets/experiential-motion-graphics/cisco-mwc-26-mobile.mp4">
           <source src="../assets/experiential-motion-graphics/cisco-mwc-26.mp4" type="video/mp4" />
           <source src="../assets/experiential motion graphics/CISCO MWC  26'/60fps_Tasman_MWC_LED_LIGHT03.mp4" type="video/mp4" />
         </video>
+        <video class="motion-video" autoplay loop muted playsinline preload="metadata" controls>
+          <source src="../assets/experiential motion graphics/CISCO MWC  26'/linkedin-mwc-2026-first-17s.mp4" type="video/mp4" />
+        </video>
       </div>
+      <p class="video-source-caption">Video sourced from Cisco</p>
     </section>
 
     <section class="motion-group stack-videos">

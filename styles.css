@@ -315,7 +315,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 }
 
 .hero-label {
-  font-size: clamp(1.81rem, 4vw, 2.62rem);
+  font-size: clamp(1.99rem, 4.4vw, 2.88rem);
   font-family: var(--font-bold);
   font-weight: 500;
   letter-spacing: 0.126em;
@@ -327,7 +327,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 6px rgba(220, 195, 130, 0.35)) drop-shadow(0 0 18px rgba(200, 180, 120, 0.15));
+  filter: none;
   margin: 0 0 0.588rem;
   position: relative;
   overflow: hidden;
@@ -349,33 +349,12 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 }
 
 @keyframes heading-intro {
-  0%   { opacity: 0; transform: translateY(8px); filter: blur(3px) drop-shadow(0 0 6px rgba(220, 195, 130, 0.35)) drop-shadow(0 0 18px rgba(200, 180, 120, 0.15)); }
-  100% { opacity: 1; transform: translateY(0);   filter: blur(0px) drop-shadow(0 0 6px rgba(220, 195, 130, 0.35)) drop-shadow(0 0 18px rgba(200, 180, 120, 0.15)); }
+  0%   { opacity: 0; transform: translateY(8px); filter: blur(3px); }
+  100% { opacity: 1; transform: translateY(0);   filter: blur(0px); }
 }
 
 .hero-label::after {
-  content: 'Real Time 3D Visualizer | Worldbuilder';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    110deg,
-    transparent 0%,
-    transparent 35%,
-    rgba(255, 240, 190, 0.18) 45%,
-    rgba(255, 245, 210, 0.25) 50%,
-    rgba(255, 240, 190, 0.18) 55%,
-    transparent 65%,
-    transparent 100%
-  );
-  background-size: 250% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: heading-sheen 8s ease-in-out infinite;
-  pointer-events: none;
+  display: none;
 }
 
 @keyframes heading-sheen {
@@ -1186,7 +1165,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   }
 
   .hero-label {
-    font-size: clamp(1.08rem, 7.1vw, 1.45rem);
+    font-size: clamp(1.19rem, 7.81vw, 1.6rem);
     width: 100%;
     max-width: 100%;
     padding: 0 0.5rem;
