@@ -55,6 +55,16 @@
     .cinematics-scroll-cta:hover {
       opacity: 0.5;
     }
+    @media (max-width: 900px), (hover: none) and (pointer: coarse) {
+      .projects-grid .project-info {
+        opacity: 1 !important;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.35) 52%, transparent 100%);
+      }
+      .projects-grid .project-cat,
+      .projects-grid .project-info h3 {
+        opacity: 1 !important;
+      }
+    }
   </style>
 </head>
 <body>

@@ -73,11 +73,12 @@
     var headingIntroDur = 900;
     var headingBaseY = 0;
     var headingDropY = 0.12;
+    var headingBrightness = 0.7; // 30% dimmer than previous level
     (function initLandscapeHeading() {
       // Use the flat DOM heading on mobile for a cleaner two-line responsive layout.
       if (isMobile) return;
       var headingText = 'REAL TIME 3D VISUALIZER | WORLDBUILDER';
-      var headingFontStack = '"Space Grotesk", "SpaceGrotesk", "Sohne", "Söhne", "Soehne", "Neue Montreal", "NeueMontreal", "Arial Black", sans-serif';
+      var headingFontStack = '"Haettenschweiler", "Impact", "Arial Narrow Bold", "Space Grotesk", "SpaceGrotesk", "Sohne", "Söhne", "Soehne", "Neue Montreal", "NeueMontreal", "Arial Black", sans-serif';
       var headingCanvas = document.createElement('canvas');
       headingCanvas.width = 4096;
       headingCanvas.height = 512;
@@ -130,30 +131,40 @@
         hctx.clearRect(0, 0, headingCanvas.width, headingCanvas.height);
         fontPx = 165;
         trackingPx = fontPx * 0.13;
-        hctx.font = '500 ' + fontPx + 'px ' + headingFontStack;
+        hctx.font = '400 ' + fontPx + 'px ' + headingFontStack;
         var maxTextWidth = headingCanvas.width * 0.92;
         var measured = measureTrackedText(hctx, headingText, trackingPx);
         if (measured > maxTextWidth) {
           fontPx = Math.floor(fontPx * (maxTextWidth / measured));
-          hctx.font = '500 ' + fontPx + 'px ' + headingFontStack;
+          hctx.font = '400 ' + fontPx + 'px ' + headingFontStack;
           trackingPx = fontPx * 0.13;
         }
 
-        // Restore the flat-heading palette as a 3D-integrated gradient.
+        // Plain white with a subtle metallic silver shift.
         var grad = hctx.createLinearGradient(
           headingCanvas.width * 0.05, 0,
           headingCanvas.width * 0.95, 0
         );
-        grad.addColorStop(0.0, '#b5eeff');
-        grad.addColorStop(0.45, '#ffd8ae');
-        grad.addColorStop(1.0, '#bde9ae');
+        grad.addColorStop(0.0, '#c8c8c8');
+        grad.addColorStop(0.28, '#d4d4d4');
+        grad.addColorStop(0.55, '#c2c2c2');
+        grad.addColorStop(0.78, '#d8d8d8');
+        grad.addColorStop(1.0, '#bdbdbd');
 
-        // Main crisp gradient face.
+        // Main metallic-white face.
         hctx.shadowBlur = 0;
         hctx.fillStyle = grad;
         drawTrackedText(hctx, headingText, headingCanvas.width * 0.5, headingCanvas.height * 0.5, trackingPx);
 
-        // Keep heading clean without additional white glow overlays.
+        // Subtle metallic top-edge highlight (no glow/bloom).
+        hctx.save();
+        hctx.globalCompositeOperation = 'source-atop';
+        var metalTop = hctx.createLinearGradient(0, headingCanvas.height * 0.2, 0, headingCanvas.height * 0.72);
+        metalTop.addColorStop(0.0, 'rgba(232, 232, 232, 0.10)');
+        metalTop.addColorStop(1.0, 'rgba(150, 150, 150, 0.06)');
+        hctx.fillStyle = metalTop;
+        hctx.fillRect(0, 0, headingCanvas.width, headingCanvas.height);
+        hctx.restore();
       }
       renderHeadingTexture();
 
@@ -162,7 +173,11 @@
       headingTex.magFilter = THREE.LinearFilter;
       headingTex.needsUpdate = true;
       if (document.fonts && document.fonts.load) {
-        document.fonts.load('500 150px "Space Grotesk"').then(function () {
+        Promise.allSettled([
+          document.fonts.load('400 160px "Haettenschweiler"'),
+          document.fonts.load('400 160px "Impact"'),
+          document.fonts.load('400 160px "Space Grotesk"')
+        ]).then(function () {
           renderHeadingTexture();
           headingTex.needsUpdate = true;
         }).catch(function () {});
@@ -183,7 +198,7 @@
           color: isFront ? 0xffffff : 0x3a3a3a,
           opacity: 1
         });
-        mat.userData.baseOpacity = 1;
+        mat.userData.baseOpacity = headingBrightness;
         mat.opacity = 0;
         var layerMesh = new THREE.Mesh(headingGeo, mat);
         layerMesh.position.z = -layer * 0.006; // 80% thinner depth
@@ -1013,6 +1028,8 @@
 
     var duration = 0;
     var rafPending = false;
+    // Keep a brief black lead-in before the sketch starts.
+    var storyStartOffset = 0.8;
 
     function clamp(v, min, max) {
       return Math.min(max, Math.max(min, v));
@@ -1027,7 +1044,8 @@
       var progress = travelled / totalScrollable;
 
       if (duration > 0) {
-        var targetTime = progress * Math.max(0, duration - 0.04);
+        var playableSpan = Math.max(0, duration - storyStartOffset - 0.04);
+        var targetTime = storyStartOffset + (progress * playableSpan);
         if (Math.abs(storyVideo.currentTime - targetTime) > 0.02) {
           try { storyVideo.currentTime = targetTime; } catch (e) {}
         }
@@ -1053,6 +1071,9 @@
     storyVideo.pause();
     storyVideo.addEventListener('loadedmetadata', function () {
       duration = Number(storyVideo.duration) || 0;
+      if (duration > 0) {
+        try { storyVideo.currentTime = Math.min(storyStartOffset, Math.max(0, duration - 0.04)); } catch (e) {}
+      }
       requestFrame();
     });
 
