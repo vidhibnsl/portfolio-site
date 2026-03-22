@@ -1184,6 +1184,17 @@
         cursorRing.style.height = '40px';
       });
     });
+
+    if (nav) {
+      nav.querySelectorAll('a').forEach(function (navLink) {
+        navLink.addEventListener('mousedown', function () {
+          ringX = mouseX;
+          ringY = mouseY;
+          cursorRing.style.left = ringX + 'px';
+          cursorRing.style.top = ringY + 'px';
+        });
+      });
+    }
   }
 
   // Form submit
