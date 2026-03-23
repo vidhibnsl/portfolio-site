@@ -640,7 +640,7 @@
           mouseOnTerrainStart = performance.now();
           clickCtaTimer = setTimeout(function () {
             if (!clickCtaDismissed && clickCta) clickCta.classList.add('show');
-          }, 5000);
+          }, 3000); /* was 5s; show click CTA ~2s sooner */
         }
       });
       hero.addEventListener('mouseleave', function () {
