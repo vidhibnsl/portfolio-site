@@ -21,6 +21,12 @@
 :root {
   --bg: #000000;
   --fg: #ffffff;
+  /* Client marquee: one light-grey family on black (~#ccc), without brightness(0)+invert (blob fill) */
+  --clients-logo-grey: #cccccc;
+  --clients-logo-opacity: 0.92;
+  /* Pull different source luminances toward the same grey band: <1 = compress toward mid, then lift */
+  --clients-logo-contrast: 0.58;
+  --clients-logo-brightness: 1.42;
   --fg-dim: rgba(255, 255, 255, 0.72);
   --font: "Wavehaus", "Sohne", "Söhne", "Soehne", "Neue Montreal", "NeueMontreal", sans-serif;
   --font-bold: "Wavehaus", "Sohne", "Söhne", "Soehne", "Neue Montreal", "NeueMontreal", sans-serif;
@@ -614,14 +620,29 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   width: auto;
   display: block;
   object-fit: contain;
-  opacity: 0.68;
   flex-shrink: 0;
+  /* Grayscale + low contrast ≈ same mid-grey; brightness lifts to match --clients-logo-grey on black */
+  filter: grayscale(1) contrast(var(--clients-logo-contrast)) brightness(var(--clients-logo-brightness));
+  opacity: var(--clients-logo-opacity);
+}
+
+.clients-track .client-docusign img {
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+  height: 24px;
+  width: 24px;
+  filter: grayscale(1) contrast(var(--clients-logo-contrast)) brightness(var(--clients-logo-brightness));
+  opacity: var(--clients-logo-opacity);
 }
 
 .clients-track img[alt="Decagon"] {
   height: 24px;
-  opacity: 0.85;
-  filter: brightness(0) invert(1);
+}
+
+.clients-track img[alt="Decagon"],
+.clients-track img[alt="Mubadala"] {
+  filter: grayscale(1) contrast(var(--clients-logo-contrast)) brightness(calc(var(--clients-logo-brightness) * 1.2));
 }
 
 .clients-track img[alt="Tommy Hilfiger"] {
@@ -635,6 +656,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 .clients-track img[alt="FIFA"],
 .clients-track img[alt="F1"] {
   height: 42px;
+  filter: grayscale(1) contrast(var(--clients-logo-contrast)) brightness(calc(var(--clients-logo-brightness) * 0.85));
 }
 
 .clients-track img[alt="Bumble"] {
@@ -647,29 +669,25 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   gap: 0.55rem;
   min-width: 0;
   padding: 0;
-  color: #ffffff;
+  color: var(--clients-logo-grey);
   font-family: var(--font);
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.1;
   white-space: nowrap;
-  opacity: 0.8;
+  opacity: 1;
   flex-shrink: 0;
 }
 
 .client-docusign img {
-  height: 24px;
-  width: 24px;
   object-fit: contain;
-  opacity: 1;
-  filter: none;
   flex-shrink: 0;
 }
 
 .client-docusign span {
   display: inline-block;
-  color: #ffffff;
+  color: var(--clients-logo-grey);
   white-space: nowrap;
 }
 
@@ -793,9 +811,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   transition-delay: 120ms;
 }
 
-/* Monochrome treatment for logo and icon assets */
-.clients-track img,
-.client-docusign img,
+/* Monochrome for hero UI icons only (client strip logos use unified rule above) */
 .mouse-icon,
 .click-cta-icon {
   filter: grayscale(100%);
@@ -813,8 +829,13 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
     animation-duration: 26s;
   }
 
-  .clients-track img {
+  .clients-track img,
+  .clients-track .client-docusign img {
     height: 18px;
+  }
+
+  .clients-track .client-docusign img {
+    width: 18px;
   }
 
   .clients-track img[alt="Bumble"] {
