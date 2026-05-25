@@ -483,7 +483,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 /* ---- Click CTA — pointer icon prompting click ---- */
 .terrain-click-cta {
   position: absolute;
-  top: 52%;
+  top: 81%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -558,6 +558,11 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
 
 .mouse-icon {
   display: block;
+}
+
+.hero-scroll-cta .mouse-icon {
+  width: 16.8px;
+  height: 26.4px;
 }
 
 .mouse-wheel {
@@ -695,10 +700,10 @@ h1, h2, h3, h4, h5, h6, b, strong, th {
   height: 42px;
 }
 
-/* Story parallax section below hero */
+/* Story parallax section below hero — taller = ~30% more scroll to scrub video to end */
 .story-parallax {
   position: relative;
-  height: 198vh;
+  height: 257.4vh;
   background: #000;
 }
 
